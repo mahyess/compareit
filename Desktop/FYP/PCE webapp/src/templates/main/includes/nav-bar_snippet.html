@@ -1,0 +1,17 @@
+<nav class="navbar navbar-light" style="background-color: #CACEE5;">
+	<a class="navbar-brand" href="{% url 'home' %}">
+		<img src="http://creatorsivf.com.np/wp-content/uploads/2015/11/creators_IVF_logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+		Creators IVF
+	</a>
+	<span class="navbar-text">
+		{% if user.is_authenticated %}
+			Hi {{ user.username }}!
+			<a href="{% url 'logout' %}" class="btn btn-outline-primary btn-sm">Log Out</a>
+			
+		{% else %}
+			You are not logged in
+			<a href="{% url 'login' %}" class="btn btn-outline-primary btn-sm">Log In</a>
+			
+		{% endif %}
+	</span>
+</nav>
