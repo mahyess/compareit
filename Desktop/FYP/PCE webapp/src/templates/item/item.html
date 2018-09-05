@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+	
+	<center><h3 class="title">{{title}} - {{item}}</h3><hr width="50%"></center>
+	
+	
+	<div class="container-fluid">
+		
+		<div class="row">
+			<div class="col-md-6">
+				<a href="#" class="btn btn-success">buy</a>
+			</div>
+			<br>
+			<div class="col-md-6">
+				{{item.title}}
+				{{item.category}}
+				{{item.price}}
+				{{item.origin}}
+				
+				{% for image in images %}
+					<img src="{{image.image.url}}" alt="">
+					
+					
+				{% endfor %}
+			</div>
+		</div>
+		
+	</div>
+{% endblock %}
