@@ -3,29 +3,219 @@
 
 {% block content %}
 	
-	<center><h3 class="title">{{title}} - {{item}}</h3><hr width="50%"></center>
 	
+	<style type="text/css" media="screen">
 	
-	<div class="container-fluid">
+	/*****************globals*************/
+	img {max-width: 100%; }
+	.preview {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column; }
+	@media screen and (max-width: 996px) {.preview {margin-bottom: 20px; } }
+	.preview-pic {-webkit-box-flex: 1;-webkit-flex-grow: 1;-ms-flex-positive: 1;flex-grow: 1; }
+	.preview-thumbnail.nav-tabs {border: none;margin-top: 15px; }
+	.preview-thumbnail.nav-tabs li {width: 18%;margin-right: 2.5%; }
+	.preview-thumbnail.nav-tabs li img {max-width: 100%;display: block; }
+	.preview-thumbnail.nav-tabs li a {padding: 0;margin: 0; }
+	.preview-thumbnail.nav-tabs li:last-of-type {margin-right: 0; }
+	.tab-content {overflow: hidden; }
+	.tab-content img {width: 100%;-webkit-animation-name: opacity;animation-name: opacity;-webkit-animation-duration: .3s;animation-duration: .3s; }
+	.card {margin-top: 50px;background: #eee;padding: 3em;line-height: 1.5em; }
+	@media screen and (min-width: 997px) {.wrapper {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex; } }
+	.details {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column; }
+	.colors {-webkit-box-flex: 1;-webkit-flex-grow: 1;-ms-flex-positive: 1;flex-grow: 1; }
+	.product-title, .price, .sizes, .colors {font-weight: bold; }
+	.checked span {color: #ff9f1a; }
+	.product-title, .rating, .product-description, .price, .vote, .sizes {margin-bottom: 15px; }
+	.product-title {margin-top: 0; }
+	.size {margin-right: 10px; }
+	.size:first-of-type {margin-left: 40px; }
+	.color {display: inline-block;vertical-align: middle;margin-right: 10px;height: 2em;width: 2em;border-radius: 2px; }.color:first-of-type {margin-left: 20px; }
+	.add-to-cart, .like {background: #ff9f1a;padding: 1.2em 1.5em;border: none;text-transform: UPPERCASE;font-weight: bold;color: #fff;-webkit-transition: background .3s ease;transition: background .3s ease; }.add-to-cart:hover, .like:hover {background: #b36800;color: #fff; }
+	.not-available {text-align: center;line-height: 2em; }.not-available:before {font-family: fontawesome;content: "\f00d";color: #fff; }
+	.orange {background: #ff9f1a; }
+	.green {background: #85ad00; }
+	.blue {background: #0076ad; }
+	.tooltip-inner {padding: 1.3em; }
+	@-webkit-keyframes opacity {0% {opacity: 0;-webkit-transform: scale(3);transform: scale(3); }100% {opacity: 1;-webkit-transform: scale(1);transform: scale(1); } }
+	@keyframes opacity {0% {opacity: 0;-webkit-transform: scale(3);transform: scale(3); }100% {opacity: 1;-webkit-transform: scale(1);transform: scale(1); } }
 		
-		<div class="row">
-			<div class="col-md-6">
-				<a href="#" class="btn btn-success">buy</a>
-			</div>
-			<br>
-			<div class="col-md-6">
-				{{item.title}}
-				{{item.category}}
-				{{item.price}}
-				{{item.origin}}
-				
-				{% for image in images %}
-					<img src="{{image.image.url}}" alt="">
+	</style>
+	
+	
+	<div class="card">
+		<div class="container-fliud">
+			<div class="wrapper row">
+				<div id="itemCarousel" class="preview col-md-4 carousel slide" data-ride="carousel">
 					
-					
+					<div class="preview-pic tab-content carousel-inner" role="listbox">
+						
+						{% for image in images %}
+							
+							<div {% if forloop.counter == 1 %} class="carousel-item tab-pane active" "{% else %} class="carousel-item tab-pane" {% endif %} id="pic-{{forloop.counter}}">
+							
+							<img class="d-block w-100" src="{{image.image.url}}" width="200px" height="400px" alt="">
+						</div>
+					{% endfor %}
+				</div>
+				<ul class="preview-thumbnail nav nav-tabs">
+					{% for image in images %}
+						<li {% if forloop.counter == 1 %} class="active" {% endif %}>
+						<a data-target="#pic-{{forloop.counter}}" data-toggle="tab"><img src="{{image.image.url}}" alt=""></a>
+					</li>
 				{% endfor %}
+			</ul>
+			
+		</div>
+		<div class="details col-md-8">
+			<h3 class="product-title">{{item.title}}</h3>
+			<div class="rating">
+				<div class="stars">
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star"></span>
+				</div>
+				<span class="review-no">41 reviews</span>
+			</div>
+			<p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.</p>
+			
+			
+			{% if item.id == 1 %}
+				<div class="row">
+					
+					<a href="http://localhost/prestashop/index.php?id_product=20&id_product_attribute=0&rewrite=iphone-x&controller=product" class="row btn btn-outline-success price justify-content-center ml-3" width="50%">
+						<span class="col-md-2">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Nederland_1_Logo_2000.png" width="36" height="36" alt="">
+						</span>
+						<span class="col-md-10">Price: <span>Rs. {{item.price}}</span></span>
+					</a>
+					
+				</div>
+				<div class="row">
+					
+					<a href="#" class="row btn btn-outline-warning price justify-content-center ml-3" width="50%">
+						<span class="col-md-2">
+							<img src="https://static1.squarespace.com/static/5383a76de4b06dea6734f421/t/53d69fd0e4b049ef1388434e/1406758250399/2+logo" width="36" height="36" alt="">
+						</span>
+						<span class="col-md-10">Price: <span>Rs. 105000.00</span></span>
+					</a>
+					
+				</div>
+				<div class="row">
+					
+					<a href="#" class="row btn btn-outline-warning price justify-content-center ml-3" width="50%">
+						<span class="col-md-2">
+							<img src="https://img00.deviantart.net/e3cc/i/2005/109/c/c/_3_logo_by_thedsw.png" width="36" height="36" alt="">
+						</span>
+						<span class="col-md-10">Price: <span>Rs. 110000.00</span></span>
+					</a>
+					
+				</div>
+				{% elif item.id == 2 %}
+				<div class="row">
+					
+					<a href="http://localhost/store3/index.php?id_product=22&id_product_attribute=0&rewrite=samsung-note-9&controller=product"" class="row btn btn-outline-success price justify-content-center ml-3" width="50%">
+						<span class="col-md-2">
+							<img src="https://img00.deviantart.net/e3cc/i/2005/109/c/c/_3_logo_by_thedsw.png" width="36" height="36" alt="">
+						</span>
+						<span class="col-md-10">Price: <span>Rs. {{item.price}}</span></span>
+					</a>
+					
+				</div>
+				<div class="row">
+					
+					<a href="#" class="row btn btn-outline-warning price justify-content-center ml-3" width="50%">
+						<span class="col-md-2">
+							<img src="https://static1.squarespace.com/static/5383a76de4b06dea6734f421/t/53d69fd0e4b049ef1388434e/1406758250399/2+logo" width="36" height="36" alt="">
+						</span>
+						<span class="col-md-10">Price: <span>Rs. 100000.00</span></span>
+					</a>
+					
+				</div>
+				<div class="row">
+					
+					<a href="#" class="row btn btn-outline-warning price justify-content-center ml-3" width="50%">
+						<span class="col-md-2">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Nederland_1_Logo_2000.png" width="36" height="36" alt="">
+						</span>
+						<span class="col-md-10">Price: <span>Rs. 102000.00</span></span>
+					</a>
+					
+				</div>
+				
+				
+				
+				{% elif item.id == 3 %}
+				<div class="row">
+					
+					<a href="http://localhost/store2/index.php?id_product=21&id_product_attribute=0&rewrite=oneplus-6&controller=product" class="row btn btn-outline-success price justify-content-center ml-3" width="50%">
+						<span class="col-md-2">
+							<img src="https://static1.squarespace.com/static/5383a76de4b06dea6734f421/t/53d69fd0e4b049ef1388434e/1406758250399/2+logo" width="36" height="36" alt="">
+						</span>
+						<span class="col-md-10">Price: <span>Rs. {{item.price}}</span></span>
+					</a>
+					
+				</div>
+				<div class="row">
+					
+					<a href="#" class="row btn btn-outline-warning price justify-content-center ml-3" width="50%">
+						<span class="col-md-2">
+							<img src="https://img00.deviantart.net/e3cc/i/2005/109/c/c/_3_logo_by_thedsw.png" width="36" height="36" alt="">
+						</span>
+						<span class="col-md-10">Price: <span>Rs. 65000.00</span></span>
+					</a>
+					
+				</div>
+				<div class="row">
+					
+					<a href="#" class="row btn btn-outline-warning price justify-content-center ml-3" width="50%">
+						<span class="col-md-2">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Nederland_1_Logo_2000.png" width="36" height="36" alt="">
+						</span>
+						<span class="col-md-10">Price: <span>Rs. 67500.00</span></span>
+					</a>
+					
+				</div>
+				
+				
+			{% endif %}
+			
+			<hr width="70%">
+			<div id="features">
+				<h4><u>Features and Specifications</u></h4>
+				<table>
+					
+					<tr>
+						<td>Release date</td>
+						<td>September 2017</td>
+					</tr>
+					<tr>
+						<td>Form factor</td>
+						<td>Touchscreen</td>
+					</tr>
+					<tr>
+						<td>Dimensions (mm)</td>
+						<td>143.60 x 70.90 x 7.70</td>
+					</tr>
+					<tr>
+						<td>Weight (g)</td>
+						<td>174.00</td>
+					</tr>
+					<tr>
+						<td>Battery capacity (mAh)</td>
+						<td>2716</td>
+					</tr>
+					<tr>
+						<td>Removable battery</td>
+						<td>No</td>
+					</tr>
+					
+				</table>
+				
 			</div>
 		</div>
-		
 	</div>
+</div>
+</div>
+
 {% endblock %}

@@ -7,3 +7,4 @@ urlpatterns = [
 # path('', home, name='home'),
      re_path(r'^(?P<id>\d+)/$',item, name='item'),
 ]
+
