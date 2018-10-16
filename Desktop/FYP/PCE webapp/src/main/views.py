@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from .lib.scraper import main as scraper
+from .lib.product_match import main as scraper
 from django.http import JsonResponse
 from django.core import serializers
 # from .lib.scraper import daraz_search, muncha_search
@@ -8,7 +8,7 @@ import json
 
 
 def home(request):
-
+    # data = None
     context = {
         'title' : 'Home',
     }
