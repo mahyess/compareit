@@ -287,16 +287,16 @@ def muncha_search(query):
         print('Muncha: Error in Connection')
         pass
 
-def main():
-    query = input('Enter Search Query:')
+def main(query):
+    # query = input('Enter Search Query:')
     daraz_search(query)
     sastodeal_search(query)
     muncha_search(query)
     nepbay_search(query)
 
-    print(search_results)
+    # print(search_results)
 
     return(search_results)
 
 if __name__ == '__main__':
-    main()
+    main(query)

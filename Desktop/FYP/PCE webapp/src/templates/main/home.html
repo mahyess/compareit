@@ -33,25 +33,27 @@
 		<div class="row">
 			{% for value in data %}
 				<div class="col-sm-3">
-					<div class="thumb-wrapper">
-						<div class="img-box">
-							<img src="{{value.details.image}}" class="img-responsive img-fluid" alt="">
-						</div>
-						<div class="thumb-content">
-							<h4>{{value.details.title}}</h4>
-							<p class="item-price"><strike>{{value.details.price.marking_price}}</strike> <span>{{value.details.price.selling_price}}</span></p>
-							<div class="star-rating">
-								<ul class="list-inline">
-									<li class="list-inline-item"><i class="fa fa-star"></i></li>
-									<li class="list-inline-item"><i class="fa fa-star"></i></li>
-									<li class="list-inline-item"><i class="fa fa-star"></i></li>
-									<li class="list-inline-item"><i class="fa fa-star"></i></li>
-									<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-								</ul>
+					<a href="{% url 'product' id=value.id %}">
+						<div class="thumb-wrapper">
+							<div class="img-box">
+								<img src="{{value.image}}" class="img-responsive img-fluid" alt="">
 							</div>
-							<a href="{{value.details.url}}" class="btn btn-primary">Add to Cart</a>
+							<div class="thumb-content">
+								<h4>{{value.title}}</h4>
+								<p class="item-price"><strike>{{value.price.max_price}}</strike> <span>{{value.price.min_price}}</span></p>
+								<div class="star-rating">
+									<ul class="list-inline">
+										<li class="list-inline-item"><i class="fa fa-star"></i></li>
+										<li class="list-inline-item"><i class="fa fa-star"></i></li>
+										<li class="list-inline-item"><i class="fa fa-star"></i></li>
+										<li class="list-inline-item"><i class="fa fa-star"></i></li>
+										<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+									</ul>
+								</div>
+								<!-- <a href="{{value}}" class="btn btn-primary">Add to Cart</a> -->
+							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 			{% endfor %}
 		</div>

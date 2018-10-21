@@ -12,7 +12,7 @@ def title_match(bt, qt):
 
 def price_match(bp, qp):
 	bh = bp + 0.1 * bp
-	bl = bp - 0.1 * bl
+	bl = bp - 0.1 * bp
 	br = True if bl <= qp <= bh else False
 	qh = qp + 0.1 * qp
 	ql = qp - 0.1 * qp
@@ -33,50 +33,52 @@ cleaned_scrap_data = []
 def clean_scrap_data(scrap):
 	for idx, item in enumerate(scrap):
 		check = False
-		for listed_item in cleaned_scrap_data:
-			print('hi')
-			check = product_match(scrap['details']['title'], listed_item['options']['title'])
+		for idy, listed_item in enumerate(cleaned_scrap_data):
+			check = False
+			# print(idx, ' - ', idy)
+			check = product_match(listed_item['title'], listed_item['price']['min_price'], scrap[idx]['details']['title'], scrap[idx]['details']['price']['selling_price'])
 			if check:
 				# print('\n------------------\n')
-				cleaned_scrap_data[idx]['options'].append({
-					'origin': scrap['details']['origin'],
-					'url': scrap['details']['url'],
-					'title': scrap['details']['title'],
-					'image': scrap['details']['image'],
+				cleaned_scrap_data[idy]['options'].append({
+					'origin': scrap[idx]['details']['origin'],
+					'url': scrap[idx]['details']['url'],
+					'title': scrap[idx]['details']['title'],
+					'image': scrap[idx]['details']['image'],
 					'price': {
-						'marking_price': scrap['details']['marking_price'],
-						'selling_price': scrap['details']['selling_price']
-						}
-					})
+						'marking_price': scrap[idx]['details']['price']['marking_price'],
+						'selling_price': scrap[idx]['details']['price']['selling_price']
+					}
+				})
 				# for update of title, if valid
-				cleaned_scrap_data[idx]['title'] = df_title(cleaned_scrap_data[idx]['title'], scrap['details']['title'])
+				cleaned_scrap_data[idy]['title'] = df_title(cleaned_scrap_data[idy]['title'], scrap[idx]['details']['title'])
 				# for update of outside prices
-				if scrap['details']['price']['marking_price'] is not None:
+				if scrap[idx]['details']['price']['marking_price'] is not None:
 					# for max price, if marking price exists in scraped data
-					cleaned_scrap_data[idx]['price']['max_price'] = max_df_price(cleaned_scrap_data[idx]['price']['max_price'], scrap['details']['price']['marking_price'])
+					cleaned_scrap_data[idy]['price']['max_price'] = max_df_price(cleaned_scrap_data[idy]['price']['max_price'], scrap[idx]['details']['price']['marking_price'])
 				else:
 					# for max price, if marking price doesn't exist in scraped data
-					cleaned_scrap_data[idx]['price']['max_price'] = max_df_price(cleaned_scrap_data[idx]['price']['max_price'], scrap['details']['price']['selling_price'])
+					cleaned_scrap_data[idy]['price']['max_price'] = max_df_price(cleaned_scrap_data[idy]['price']['max_price'], scrap[idx]['details']['price']['selling_price'])
 				# for min price
-				cleaned_scrap_data[idx]['price']['min_price'] = min_df_price(cleaned_scrap_data[idx]['price']['min_price'], scrap['details']['price']['selling_price'])
+				cleaned_scrap_data[idy]['price']['min_price'] = min_df_price(cleaned_scrap_data[idy]['price']['min_price'], scrap[idx]['details']['price']['selling_price'])
 				break
 
 		if not check:
 			cleaned_scrap_data.append({
-				'id': idx,
-				'title': scrap['details']['title'],
+				'id': len(cleaned_scrap_data),
+				'title': scrap[idx]['details']['title'],
 				'price': {
-					'max_price': scrap['details']['marking_price'],
-					'min_price': scrap['details']['selling_price']
+					'max_price': scrap[idx]['details']['price']['marking_price'],
+					'min_price': scrap[idx]['details']['price']['selling_price']
 					},
+				'image': scrap[idx]['details']['image'],
 				'options': [{
-					'origin': scrap['details']['origin'],
-					'url': scrap['details']['url'],
-					'title': scrap['details']['title'],
-					'image': scrap['details']['image'],
+					'origin': scrap[idx]['details']['origin'],
+					'url': scrap[idx]['details']['url'],
+					'title': scrap[idx]['details']['title'],
+					'image': scrap[idx]['details']['image'],
 					'price': {
-						'marking_price': scrap['details']['marking_price'],
-						'selling_price': scrap['details']['selling_price']
+						'marking_price': scrap[idx]['details']['price']['marking_price'],
+						'selling_price': scrap[idx]['details']['price']['selling_price']
 						}
 					}]
 				})
@@ -84,7 +86,10 @@ def clean_scrap_data(scrap):
 		# print(item)
 
 def main(query):
-	return clean_scrap_data(scraper(query))
+	clean_scrap_data(scraper(query))
+	data = cleaned_scrap_data
+	# print(data)
+	return data
 
 if __name__ == '__main__':
-	main()
+	main(query)

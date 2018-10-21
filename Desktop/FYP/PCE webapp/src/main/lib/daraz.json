@@ -1,590 +1,192 @@
+[
+{'id': 0, 
+'title': 'Oppo F5-S [6GB RAM/ 64GB ROM] 6.0 - (Black)', 
+'price': {'max_price': 44990.0, 'min_price': 35000.0}, 
+'options': [
+  {'origin': 0, 
+  'url': '//www.daraz.com.np/products/oppo-f5-s-6gb-ram-64gb-rom-60-black-i24424-s72864.html?search=1', 
+  'title': 'Oppo F5-S [6GB RAM/ 64GB ROM] 6.0" - (Black)', 
+  'image': 'https://static-01.daraz.com.np/original/5f3142001034f2701e92dd02b64d072f.jpg', 
+  'price': {'marking_price': 44990.0, 'selling_price': 35000.0}}]}, 
 
-    "listItems": [
-      {
-        "name": "The China Lover: A Novel - Ian Buruma",
-        "nid": "158600",
-        "icons": [],
-        "productUrl": "//www.daraz.com.np/products/the-china-lover-a-novel-ian-buruma-i153395-s3309565.html?search=1",
-        "image": "https://static-01.daraz.com.np/original/814d9983ad6b80c092d1ec4caea6f001.jpg",
-        "originalPrice": "595.00",
-        "originalPriceShow": "Rs. 595",
-        "price": "505.00",
-        "priceShow": "Rs. 505",
-        "discount": "-15%",
-        "ratingScore": "0",
-        "review": "0",
-        "installment": "",
-        "tItemType": "nt_product",
-        "location": "Nepal",
-        "cheapest_sku": "OT776BO00EOMKNAFAMZ-246208",
-        "sku": "OT776BO00EOMKNAFAMZ",
-        "skus": [
-          {
-            "id": "OT776BO00EOMKNAFAMZ-246208"
-          }
-        ],
-        "description": [
-          "The China Lover: A Novel ",
-          "Paperback",
-          "Pages: 320 Pages",
-          "Language: English",
-          "ISBN: 978-1843548027",
-          "Publisher:  Atlantic Books; Main edition (7 August 2014)",
-          "Product Dimensions: 5.5 x 0.8 x 8.4 inches",
-          "Author: Ian Buruma"
-        ],
-        "brandId": "61301",
-        "brandName": "other",
-        "sellerId": "9575",
-        "sellerName": "Book World Nepal",
-        "thumbs": [
-          {
-            "image": "https://static-01.daraz.com.np/original/814d9983ad6b80c092d1ec4caea6f001.jpg",
-            "productUrl": "//www.daraz.com.np/products/the-china-lover-a-novel-ian-buruma-i153395-s3309565.html?search=1",
-            "sku": "OT776BO00EOMKNAFAMZ",
-            "skuId": "3309565"
-          }
-        ],
-        "restrictedAge": 0,
-        "categories": [
-          3374,
-          3375,
-          3411,
-          3442
-        ],
-        "clickTrace": "query:lovers;nid:158600;src:LazadaMainSrp;rn:710fa0caeb0f73ee557d2ef99071674f;region:np;sku:OT776BO00EOMKNAFAMZ;price:505.00;client:desktop;supplier_id:9575;asc_category_id:3442;item_id:153395;sku_id:3309565;shop_id:9580",
-        "addToCartSkus": [
-          {
-            "sku": "OT776BO00EOMKNAFAMZ-246208",
-            "skuId": "3309565"
-          }
-        ],
-        "itemId": "153395",
-        "voucherId": "",
-        "skuId": "3309565"
-      },
-      {
-        "name": "The Virgin's Lover - Philippa Gregory",
-        "nid": "48679",
-        "icons": [],
-        "productUrl": "//www.daraz.com.np/products/the-virgins-lover-philippa-gregory-i62380-s322146.html?search=1",
-        "image": "https://static-01.daraz.com.np/original/2d47777e318714b666dfe2323c7c6158.jpg",
-        "price": "616.00",
-        "priceShow": "Rs. 616",
-        "ratingScore": "0",
-        "review": "0",
-        "installment": "",
-        "tItemType": "nt_product",
-        "location": "Bagmati",
-        "cheapest_sku": "PI214BO1M5PGGNAFAMZ-70775",
-        "sku": "PI214BO1M5PGGNAFAMZ",
-        "skus": [
-          {
-            "id": "PI214BO1M5PGGNAFAMZ-70775"
-          }
-        ],
-        "description": [
-          "Philippa Gregory",
-          "Paperback: 496 pages",
-          "Publisher: HarperCollins (20 April 2017)",
-          "Language: English",
-          "ISBN-10: 0007147317",
-          "ISBN-13: 978-0007147311"
-        ],
-        "brandId": "186380",
-        "brandName": "Pilgrims Books",
-        "sellerId": "8711",
-        "sellerName": "pilgrimsbook",
-        "thumbs": [
-          {
-            "image": "https://static-01.daraz.com.np/original/2d47777e318714b666dfe2323c7c6158.jpg",
-            "productUrl": "//www.daraz.com.np/products/the-virgins-lover-philippa-gregory-i62380-s322146.html?search=1",
-            "sku": "PI214BO1M5PGGNAFAMZ",
-            "skuId": "322146"
-          }
-        ],
-        "restrictedAge": 0,
-        "categories": [
-          3374,
-          3375,
-          3411,
-          3442
-        ],
-        "clickTrace": "query:lovers;nid:48679;src:LazadaMainSrp;rn:710fa0caeb0f73ee557d2ef99071674f;region:np;sku:PI214BO1M5PGGNAFAMZ;price:616.00;client:desktop;supplier_id:8711;asc_category_id:3442;item_id:62380;sku_id:322146;shop_id:8924",
-        "addToCartSkus": [
-          {
-            "sku": "PI214BO1M5PGGNAFAMZ-70775",
-            "skuId": "322146"
-          }
-        ],
-        "itemId": "62380",
-        "voucherId": "",
-        "skuId": "322146"
-      },
-      {
-        "name": "Food Lovers: Slow Cooker - Columbia Marketing Ltd",
-        "nid": "159316",
-        "icons": [],
-        "productUrl": "//www.daraz.com.np/products/food-lovers-slow-cooker-columbia-marketing-ltd-i156334-s6845898.html?search=1",
-        "image": "https://static-01.daraz.com.np/original/5892512977fa4bafc057cf7bdf907d08.jpg",
-        "originalPrice": "320.00",
-        "originalPriceShow": "Rs. 320",
-        "price": "272.00",
-        "priceShow": "Rs. 272",
-        "discount": "-15%",
-        "ratingScore": "0",
-        "review": "0",
-        "installment": "",
-        "tItemType": "nt_product",
-        "location": "Nepal",
-        "cheapest_sku": "OT776BO10JWRGNAFAMZ-247141",
-        "sku": "OT776BO10JWRGNAFAMZ",
-        "skus": [
-          {
-            "id": "OT776BO10JWRGNAFAMZ-247141"
-          }
-        ],
-        "description": [
-          "Food Lovers: Slow Cooker ",
-          "Paperback",
-          "Pages: 48 Pages",
-          "Language: English",
-          "ISBN: 978-1908533555",
-          "Publisher: Transatlantic Press; 1 edition (1 October 2012)",
-          "Columbia Marketing Ltd"
-        ],
-        "brandId": "61301",
-        "brandName": "other",
-        "sellerId": "9575",
-        "sellerName": "Book World Nepal",
-        "thumbs": [
-          {
-            "image": "https://static-01.daraz.com.np/original/5892512977fa4bafc057cf7bdf907d08.jpg",
-            "productUrl": "//www.daraz.com.np/products/food-lovers-slow-cooker-columbia-marketing-ltd-i156334-s6845898.html?search=1",
-            "sku": "OT776BO10JWRGNAFAMZ",
-            "skuId": "6845898"
-          }
-        ],
-        "restrictedAge": 0,
-        "categories": [
-          3374,
-          3375,
-          3411,
-          3425
-        ],
-        "clickTrace": "query:lovers;nid:159316;src:LazadaMainSrp;rn:710fa0caeb0f73ee557d2ef99071674f;region:np;sku:OT776BO10JWRGNAFAMZ;price:272.00;client:desktop;supplier_id:9575;asc_category_id:3425;item_id:156334;sku_id:6845898;shop_id:9580",
-        "addToCartSkus": [
-          {
-            "sku": "OT776BO10JWRGNAFAMZ-247141",
-            "skuId": "6845898"
-          }
-        ],
-        "itemId": "156334",
-        "voucherId": "",
-        "skuId": "6845898"
-      },
-      {
-        "name": "Food Lovers: Salsas, Sauces And Dressing - Croxley Green",
-        "nid": "159315",
-        "icons": [],
-        "productUrl": "//www.daraz.com.np/products/food-lovers-salsas-sauces-and-dressing-croxley-green-i156333-s6845897.html?search=1",
-        "image": "https://static-01.daraz.com.np/original/674663d46565c63ea9bb8c113fcbe0c9.jpg",
-        "originalPrice": "320.00",
-        "originalPriceShow": "Rs. 320",
-        "price": "272.00",
-        "priceShow": "Rs. 272",
-        "discount": "-15%",
-        "ratingScore": "0",
-        "review": "0",
-        "installment": "",
-        "tItemType": "nt_product",
-        "location": "Nepal",
-        "cheapest_sku": "OT776BO0ULKPONAFAMZ-247140",
-        "sku": "OT776BO0ULKPONAFAMZ",
-        "skus": [
-          {
-            "id": "OT776BO0ULKPONAFAMZ-247140"
-          }
-        ],
-        "description": [
-          "Food Lovers: Salsas, Sauces And Dressing - Croxley Green",
-          "Paperback",
-          "Pages: 48 Pages",
-          "Language: English",
-          "ISBN: 978-1908533654",
-          "Publisher: Transatlantic Press (31 October 2012)",
-          "Author: Croxley Green"
-        ],
-        "brandId": "61301",
-        "brandName": "other",
-        "sellerId": "9575",
-        "sellerName": "Book World Nepal",
-        "thumbs": [
-          {
-            "image": "https://static-01.daraz.com.np/original/674663d46565c63ea9bb8c113fcbe0c9.jpg",
-            "productUrl": "//www.daraz.com.np/products/food-lovers-salsas-sauces-and-dressing-croxley-green-i156333-s6845897.html?search=1",
-            "sku": "OT776BO0ULKPONAFAMZ",
-            "skuId": "6845897"
-          }
-        ],
-        "restrictedAge": 0,
-        "categories": [
-          3374,
-          3375,
-          3411,
-          3425
-        ],
-        "clickTrace": "query:lovers;nid:159315;src:LazadaMainSrp;rn:710fa0caeb0f73ee557d2ef99071674f;region:np;sku:OT776BO0ULKPONAFAMZ;price:272.00;client:desktop;supplier_id:9575;asc_category_id:3425;item_id:156333;sku_id:6845897;shop_id:9580",
-        "addToCartSkus": [
-          {
-            "sku": "OT776BO0ULKPONAFAMZ-247140",
-            "skuId": "6845897"
-          }
-        ],
-        "itemId": "156333",
-        "voucherId": "",
-        "skuId": "6845897"
-      },
-      {
-        "name": "Food Lovers Lunch: Atlantic Publishing - Croxley Green",
-        "nid": "159314",
-        "icons": [],
-        "productUrl": "//www.daraz.com.np/products/food-lovers-lunch-atlantic-publishing-croxley-green-i156332-s6845896.html?search=1",
-        "image": "https://static-01.daraz.com.np/original/5d6701e6926ef8c6e9ead0dc2f2f625d.jpg",
-        "originalPrice": "320.00",
-        "originalPriceShow": "Rs. 320",
-        "price": "272.00",
-        "priceShow": "Rs. 272",
-        "discount": "-15%",
-        "ratingScore": "0",
-        "review": "0",
-        "installment": "",
-        "tItemType": "nt_product",
-        "location": "Nepal",
-        "cheapest_sku": "OT776BO0ON8NWNAFAMZ-247139",
-        "sku": "OT776BO0ON8NWNAFAMZ",
-        "skus": [
-          {
-            "id": "OT776BO0ON8NWNAFAMZ-247139"
-          }
-        ],
-        "description": [
-          "Food Lovers Lunch: Atlantic Publishing ",
-          "Paperback",
-          "Pages: 48 Pages",
-          "Language: English",
-          "ISBN: 978-1908533609",
-          "Publisher: Transatlantic Press; UK ed. edition (31 October 2012)",
-          "Author: Croxley Green "
-        ],
-        "brandId": "61301",
-        "brandName": "other",
-        "sellerId": "9575",
-        "sellerName": "Book World Nepal",
-        "thumbs": [
-          {
-            "image": "https://static-01.daraz.com.np/original/5d6701e6926ef8c6e9ead0dc2f2f625d.jpg",
-            "productUrl": "//www.daraz.com.np/products/food-lovers-lunch-atlantic-publishing-croxley-green-i156332-s6845896.html?search=1",
-            "sku": "OT776BO0ON8NWNAFAMZ",
-            "skuId": "6845896"
-          }
-        ],
-        "restrictedAge": 0,
-        "categories": [
-          3374,
-          3375,
-          3411,
-          3425
-        ],
-        "clickTrace": "query:lovers;nid:159314;src:LazadaMainSrp;rn:710fa0caeb0f73ee557d2ef99071674f;region:np;sku:OT776BO0ON8NWNAFAMZ;price:272.00;client:desktop;supplier_id:9575;asc_category_id:3425;item_id:156332;sku_id:6845896;shop_id:9580",
-        "addToCartSkus": [
-          {
-            "sku": "OT776BO0ON8NWNAFAMZ-247139",
-            "skuId": "6845896"
-          }
-        ],
-        "itemId": "156332",
-        "voucherId": "",
-        "skuId": "6845896"
-      },
-      {
-        "name": "Sons And Lovers - D. H. Lawrence",
-        "nid": "76732",
-        "icons": [],
-        "productUrl": "//www.daraz.com.np/products/sons-and-lovers-d-h-lawrence-i52947-s254202.html?search=1",
-        "image": "https://static-01.daraz.com.np/original/9d10a8956438157b910a440bbe2efb96.jpg",
-        "price": "320.00",
-        "priceShow": "Rs. 320",
-        "ratingScore": "0",
-        "review": "0",
-        "installment": "",
-        "tItemType": "nt_product",
-        "location": "Bagmati",
-        "cheapest_sku": "PI214BO0E5EQGNAFAMZ-110830",
-        "sku": "PI214BO0E5EQGNAFAMZ",
-        "skus": [
-          {
-            "id": "PI214BO0E5EQGNAFAMZ-110830"
-          }
-        ],
-        "description": [
-          "Sons And Lovers - D. H. Lawrence"
-        ],
-        "brandId": "186380",
-        "brandName": "Pilgrims Books",
-        "sellerId": "8711",
-        "sellerName": "pilgrimsbook",
-        "thumbs": [
-          {
-            "image": "https://static-01.daraz.com.np/original/9d10a8956438157b910a440bbe2efb96.jpg",
-            "productUrl": "//www.daraz.com.np/products/sons-and-lovers-d-h-lawrence-i52947-s254202.html?search=1",
-            "sku": "PI214BO0E5EQGNAFAMZ",
-            "skuId": "254202"
-          }
-        ],
-        "restrictedAge": 0,
-        "categories": [
-          3374,
-          3375,
-          3411,
-          3442
-        ],
-        "clickTrace": "query:lovers;nid:76732;src:LazadaMainSrp;rn:710fa0caeb0f73ee557d2ef99071674f;region:np;sku:PI214BO0E5EQGNAFAMZ;price:320.00;client:desktop;supplier_id:8711;asc_category_id:3442;item_id:52947;sku_id:254202;shop_id:8924",
-        "addToCartSkus": [
-          {
-            "sku": "PI214BO0E5EQGNAFAMZ-110830",
-            "skuId": "254202"
-          }
-        ],
-        "itemId": "52947",
-        "voucherId": "",
-        "skuId": "254202"
-      },
-      {
-        "name": "Lady Chatterleys Lover - D.H. Lawrence",
-        "nid": "76706",
-        "icons": [],
-        "productUrl": "//www.daraz.com.np/products/lady-chatterleys-lover-dh-lawrence-i52921-s254150.html?search=1",
-        "image": "https://static-01.daraz.com.np/original/dbac22fdfefd618ae50362b694b49161.jpg",
-        "price": "240.00",
-        "priceShow": "Rs. 240",
-        "ratingScore": "0",
-        "review": "0",
-        "installment": "",
-        "tItemType": "nt_product",
-        "location": "Bagmati",
-        "cheapest_sku": "PI214BO106G48NAFAMZ-110804",
-        "sku": "PI214BO106G48NAFAMZ",
-        "skus": [
-          {
-            "id": "PI214BO106G48NAFAMZ-110804"
-          }
-        ],
-        "description": [
-          "Lady Chatterleys Lover"
-        ],
-        "brandId": "186380",
-        "brandName": "Pilgrims Books",
-        "sellerId": "8711",
-        "sellerName": "pilgrimsbook",
-        "thumbs": [
-          {
-            "image": "https://static-01.daraz.com.np/original/dbac22fdfefd618ae50362b694b49161.jpg",
-            "productUrl": "//www.daraz.com.np/products/lady-chatterleys-lover-dh-lawrence-i52921-s254150.html?search=1",
-            "sku": "PI214BO106G48NAFAMZ",
-            "skuId": "254150"
-          }
-        ],
-        "restrictedAge": 0,
-        "categories": [
-          3374,
-          3375,
-          3411,
-          3442
-        ],
-        "clickTrace": "query:lovers;nid:76706;src:LazadaMainSrp;rn:710fa0caeb0f73ee557d2ef99071674f;region:np;sku:PI214BO106G48NAFAMZ;price:240.00;client:desktop;supplier_id:8711;asc_category_id:3442;item_id:52921;sku_id:254150;shop_id:8924",
-        "addToCartSkus": [
-          {
-            "sku": "PI214BO106G48NAFAMZ-110804",
-            "skuId": "254150"
-          }
-        ],
-        "itemId": "52921",
-        "voucherId": "",
-        "skuId": "254150"
-      },
-      {
-        "name": "ROXI Rose Gold Lover butterfly Earrings",
-        "nid": "155828",
-        "icons": [],
-        "productUrl": "//www.daraz.com.np/products/roxi-rose-gold-lover-butterfly-earrings-i149914-s2543077.html?search=1",
-        "image": "https://static-01.daraz.com.np/original/aec847701da3eada5484efbbdec35ac4.jpg",
-        "originalPrice": "1200.00",
-        "originalPriceShow": "Rs. 1,200",
-        "price": "600.00",
-        "priceShow": "Rs. 600",
-        "discount": "-50%",
-        "ratingScore": "0",
-        "review": "0",
-        "installment": "",
-        "tItemType": "nt_product",
-        "location": "Nepal",
-        "cheapest_sku": "RO490FA1DBVEKNAFAMZ-242245",
-        "sku": "RO490FA1DBVEKNAFAMZ",
-        "skus": [
-          {
-            "id": "RO490FA1DBVEKNAFAMZ-242245"
-          }
-        ],
-        "description": [
-          "Material:Crystal",
-          "Style: Trendy",
-          "Back Finding:Push-back",
-          "Metals Type:Zinc Alloy",
-          "Gender: Women",
-          "Model Number:2020218190",
-          "Shape\\pattern:Animal",
-          "Color:Rose Gold Plated"
-        ],
-        "brandId": "37116",
-        "brandName": "ROXI",
-        "sellerId": "9358",
-        "sellerName": "99 Tech",
-        "thumbs": [
-          {
-            "image": "https://static-01.daraz.com.np/original/aec847701da3eada5484efbbdec35ac4.jpg",
-            "productUrl": "//www.daraz.com.np/products/roxi-rose-gold-lover-butterfly-earrings-i149914-s2543077.html?search=1",
-            "sku": "RO490FA1DBVEKNAFAMZ",
-            "skuId": "2543077"
-          }
-        ],
-        "restrictedAge": 0,
-        "categories": [
-          7686,
-          7697,
-          7698,
-          10001237,
-          10001668,
-          10001796
-        ],
-        "clickTrace": "query:lovers;nid:155828;src:LazadaMainSrp;rn:710fa0caeb0f73ee557d2ef99071674f;region:np;sku:RO490FA1DBVEKNAFAMZ;price:600.00;client:desktop;supplier_id:9358;asc_category_id:10001796;item_id:149914;sku_id:2543077;shop_id:9376",
-        "addToCartSkus": [
-          {
-            "sku": "RO490FA1DBVEKNAFAMZ-242245",
-            "skuId": "2543077"
-          }
-        ],
-        "itemId": "149914",
-        "voucherId": "",
-        "skuId": "2543077"
-      },
-      {
-        "name": "French Lover",
-        "nid": "19782",
-        "icons": [],
-        "productUrl": "//www.daraz.com.np/products/french-lover-i73220-s440887.html?search=1",
-        "image": "https://static-01.daraz.com.np/original/95f391fa24f26c6180f97048a4708fe8.jpg",
-        "price": "560.00",
-        "priceShow": "Rs. 560",
-        "ratingScore": "0",
-        "review": "0",
-        "installment": "",
-        "tItemType": "nt_product",
-        "location": "Nepal",
-        "cheapest_sku": "OT776BO0H53A0NAFAMZ-23646",
-        "sku": "OT776BO0H53A0NAFAMZ",
-        "skus": [
-          {
-            "id": "OT776BO0H53A0NAFAMZ-23646"
-          }
-        ],
-        "description": [
-          "Overview",
-          "Taslima nasrin’s novel, french lover, charts the story of a woman in search of her independent identity and love in the city of love, paris.",
-          "Summary of the book"
-        ],
-        "brandId": "186492",
-        "brandName": "Anuj Book Enterprises",
-        "sellerId": "8842",
-        "sellerName": "Anuj Book Enterprises",
-        "thumbs": [
-          {
-            "image": "https://static-01.daraz.com.np/original/95f391fa24f26c6180f97048a4708fe8.jpg",
-            "productUrl": "//www.daraz.com.np/products/french-lover-i73220-s440887.html?search=1",
-            "sku": "OT776BO0H53A0NAFAMZ",
-            "skuId": "440887"
-          }
-        ],
-        "restrictedAge": 0,
-        "categories": [
-          3374,
-          3375,
-          3411,
-          3442
-        ],
-        "clickTrace": "query:lovers;nid:19782;src:LazadaMainSrp;rn:710fa0caeb0f73ee557d2ef99071674f;region:np;sku:OT776BO0H53A0NAFAMZ;price:560.00;client:desktop;supplier_id:8842;asc_category_id:3442;item_id:73220;sku_id:440887;shop_id:8972",
-        "addToCartSkus": [
-          {
-            "sku": "OT776BO0H53A0NAFAMZ-23646",
-            "skuId": "440887"
-          }
-        ],
-        "itemId": "73220",
-        "voucherId": "",
-        "skuId": "440887"
-      },
-      {
-        "name": "Silly Lover",
-        "nid": "12719",
-        "icons": [],
-        "productUrl": "//www.daraz.com.np/products/silly-lover-i78605-s490603.html?search=1",
-        "image": "https://static-01.daraz.com.np/original/da9739a73a96e0ba8ae4a5def815073a.jpg",
-        "price": "300.00",
-        "priceShow": "Rs. 300",
-        "ratingScore": "0",
-        "review": "0",
-        "installment": "",
-        "tItemType": "nt_product",
-        "location": "Bagmati",
-        "cheapest_sku": "OT776BO1ILWDKNAFAMZ-16583",
-        "sku": "OT776BO1ILWDKNAFAMZ",
-        "skus": [
-          {
-            "id": "OT776BO1ILWDKNAFAMZ-16583"
-          }
-        ],
-        "description": [
-          "The main theme of the novel is centered on an unemployed boyfriend's beautiful dream. This novel is a struggle story of a middle-classed youth to attain his his dream. Therefore, this novel will be useful to the youth who completed school or joined colleg"
-        ],
-        "brandId": "186375",
-        "brandName": "Panch Pokhari Book Store",
-        "sellerId": "5",
-        "sellerName": "Panch Pokhari Book Store",
-        "thumbs": [
-          {
-            "image": "https://static-01.daraz.com.np/original/da9739a73a96e0ba8ae4a5def815073a.jpg",
-            "productUrl": "//www.daraz.com.np/products/silly-lover-i78605-s490603.html?search=1",
-            "sku": "OT776BO1ILWDKNAFAMZ",
-            "skuId": "490603"
-          }
-        ],
-        "restrictedAge": 0,
-        "categories": [
-          3374,
-          3375,
-          3376,
-          3377
-        ],
-        "clickTrace": "query:lovers;nid:12719;src:LazadaMainSrp;rn:710fa0caeb0f73ee557d2ef99071674f;region:np;sku:OT776BO1ILWDKNAFAMZ;price:300.00;client:desktop;supplier_id:5;asc_category_id:3377;item_id:78605;sku_id:490603;shop_id:8765",
-        "addToCartSkus": [
-          {
-            "sku": "OT776BO1ILWDKNAFAMZ-16583",
-            "skuId": "490603"
-          }
-        ],
-        "itemId": "78605",
-        "voucherId": "",
-        "skuId": "490603"
-      }
-    ],
-    
+
+{'id': 1, 
+'title': 'Oppo F9 [4 GB RAM / 64 GB ROM] - Red', 
+'price': {'max_price': 41590.0, 'min_price': 39510.0}, 
+'options': [
+  {'origin': 0, 'url': '//www.daraz.com.np/products/oppo-f9-4-gb-ram-64-gb-rom-red-i435093-s22194401.html?search=1', 
+  'title': 'Oppo F9 [4 GB RAM / 64 GB ROM] - Red', 
+  'image': 'https://static-01.daraz.com.np/original/103fb9d76b3c6fe2671bc44f902bc83c.jpg', 
+  'price': {'marking_price': 41590.0, 'selling_price': 39510.0}}, 
+  {'origin': 0, 'url': '//www.daraz.com.np/products/oppo-f9-4-gb-ram-64-gb-rom-blue-i435096-s22194409.html?search=1', 
+  'title': 'Oppo F9 [4 GB RAM / 64 GB ROM] - Blue', 
+  'image': 'https://static-01.daraz.com.np/original/db9d58d50d4224988fba0eab19e76f5b.jpg', 
+  'price': {'marking_price': 41590.0, 'selling_price': 39510.0}}]}, 
+
+
+{'id': 2, 
+'title': 'Oppo A3S [2 GB RAM, 16 GB ROM] - Pink', 
+'price': {'max_price': 19490.0, 'min_price': 18516.0}, 
+'options': [
+  {'origin': 0, 
+  'url': '//www.daraz.com.np/products/oppo-a3s-2-gb-ram-16-gb-rom-pink-i325385-s10976270.html?search=1', 
+  'title': 'Oppo A3S [2 GB RAM, 16 GB ROM] - Pink', 
+  'image': 'https://static-01.daraz.com.np/original/9e902e56e94a4e13e7d7d2e17b45036f.jpg', 
+  'price': {'marking_price': 19490.0, 'selling_price': 18516.0}}]}, 
+
+{'id': 3, 
+'title': 'Oppo A3S [3 GB RAM, 32 GB ROM] - Pink', 
+'price': {'max_price': 26490.0, 'min_price': 25166.0}, 
+'options': [
+{'origin': 0, 
+'url': '//www.daraz.com.np/products/oppo-a3s-3-gb-ram-32-gb-rom-pink-i100014393-s1010273575.html?search=1', 
+'title': 'Oppo A3S [3 GB RAM, 32 GB ROM] - Pink', 
+'image': 'https://static-01.daraz.com.np/original/279ccb1ffab1477392990d61254eaece.jpg', 
+'price': {'marking_price': 26490.0, 'selling_price': 25166.0}}]}, 
+
+{'id': 4, 'title': 'Oppo Neo 7 (A33W)', 
+'price': {'max_price': 15690, 'min_price': 15690.0}, 
+'options': [
+{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--4552', 
+'title': 'Oppo Neo 7 (A33W)', 
+'image': 'https://sd.azureedge.net/0/images/product/2786/21272-White-p-0.jpg', 
+'price': {'marking_price': 15690, 'selling_price': 15690.0}}]}, 
+
+{'id': 5, 
+'title': 'Oppo F1s (A1601)', 
+'price': {'max_price': 33890, 'min_price': 33890.0}, 
+'options': [{'origin': 1, 
+'url': 'https://www.sastodeal.com/sastodeal/pr--4551', 'title': 'Oppo F1s (A1601)', 
+'image': 'https://sd.azureedge.net/0/images/product/2785/21274-Gold-p-0.jpg', 
+'price': {'marking_price': 33890, 'selling_price': 33890.0}}]}, 
+
+
+{'id': 6, 'title': 'Oppo A37F', 
+'price': {'max_price': 20490, 'min_price': 20490.0}, 
+'options': [{'origin': 1, 
+'url': 'https://www.sastodeal.com/sastodeal/pr--4550', 
+'title': 'Oppo A37F', 
+'image': 'https://sd.azureedge.net/0/images/product/2784/21273-Gold-p-0.jpg', 
+'price': {'marking_price': 20490, 'selling_price': 20490.0}}]}, 
+
+{'id': 7, 
+'title': 'Oppo A83 Smart Mobile Phone [5.7", 2GB RAM, 16GB ROM,13MP]', 
+'price': {'max_price': 17990, 'min_price': 16042.0}, 
+'options': [{'origin': 1, 
+'url': 'https://www.sastodeal.com/sastodeal/pr--30975', 
+'title': 'Oppo A83 Smart Mobile Phone [5.7", 2GB RAM, 16GB ROM,13MP]', 
+'image': 'https://sd.azureedge.net/0/images/product/19208/OPPO-A83-2GB-16GB-GOLD-p-0.jpg', 
+'price': {'marking_price': 17990, 'selling_price': 16730.0}}, 
+{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--30974', 
+'title': 'Oppo A71K Smart Mobile Phone [5.2", 2GB RAM, 16GB ROM, 13MP]', 
+'image': 'https://sd.azureedge.net/0/images/product/19207/OPPO-A71K-GOLD-p-0.jpg', 
+'price': {'marking_price': 17250, 'selling_price': 16042.0}}]}, 
+
+
+{'id': 8, 
+'title': 'Oppo F7 Smart Mobile Phone - [4GB 64GB 3400mAh]', 
+'price': {'max_price': 38990, 'min_price': 36260.0}, 
+'options': [{'origin': 1, 
+'url': 'https://www.sastodeal.com/sastodeal/pr--29391', 
+'title': 'Oppo F7 Smart Mobile Phone - [4GB 64GB 3400mAh]', 
+'image': 'https://sd.azureedge.net/0/images/product/16993/oppo-f7-C-16993.jpg', 
+'price': {'marking_price': 38990, 'selling_price': 36260.0}}, 
+{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--29390', 
+'title': 'Oppo F7 Smart Mobile Phone - [4GB 64GB 3400mAh]', 
+'image': 'https://sd.azureedge.net/0/images/product/16993/oppo-f7-C-16993.jpg', 
+'price': {'marking_price': 38990, 'selling_price': 36260.0}}, 
+{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--26725', 
+'title': 'Oppo F7 Smart Mobile Phone - [4GB 64GB 3400mAh]', 
+'image': 'https://sd.azureedge.net/0/images/product/16993/9black-C-16993.jpg', 
+'price': {'marking_price': 38990, 'selling_price': 36260.0}}, 
+{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--26724', 
+'title': 'Oppo F7 Smart Mobile Phone - [4GB 64GB 3400mAh]', 
+'image': 'https://sd.azureedge.net/0/images/product/16993/9grey-C-16993.jpg', 
+'price': {'marking_price': 38990, 'selling_price': 36260.0}}]}, 
+
+
+{'id': 9, 
+'title': 'Oppo F5s Smartphone Gold [6"  6GB  64GB  16MP  20MP  3200mAh]', 
+'price': {'max_price': 44990, 'min_price': 42740.0}, 
+'options': [{'origin': 1, 
+'url': 'https://www.sastodeal.com/sastodeal/pr--22937', 
+'title': 'Oppo F5s Smartphone Gold [6"  6GB  64GB  16MP  20MP  3200mAh]', 
+'image': 'https://sd.azureedge.net/0/images/product/14947/2gold-C-14947.jpg', 
+'price': {'marking_price': 44990, 'selling_price': 42740.0}}, 
+{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--22936', 
+'title': 'Oppo F5s Smartphone Black [6"  6GB  64GB  16MP  20MP  3200mAh]', 
+'image': 'https://sd.azureedge.net/0/images/product/14947/2black-C-14947.jpg', 
+'price': {'marking_price': 44990, 'selling_price': 42740.0}}]}, 
+
+
+{'id': 10, 
+'title': 'Oppo F5 Smartphone Gold [6"  4GB  32GB  16MP  20MP  3200mAh]', 
+'price': {'max_price': 33990, 'min_price': 32290.0}, 
+'options': [{'origin': 1, 
+'url': 'https://www.sastodeal.com/sastodeal/pr--22935', 
+'title': 'Oppo F5 Smartphone Gold [6"  4GB  32GB  16MP  20MP  3200mAh]', 
+'image': 'https://sd.azureedge.net/0/images/product/14946/3gold-C-14946.jpg', 
+'price': {'marking_price': 33990, 'selling_price': 32290.0}}, 
+{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--22934', 
+'title': 'Oppo F5 Smartphone Black [6"  4GB  32GB  16MP  20MP  3200mAh]', 
+'image': 'https://sd.azureedge.net/0/images/product/14946/3black-C-14946.jpg', 
+'price': {'marking_price': 33990, 'selling_price': 32290.0}}]}, 
+
+
+{'id': 11, 'title': 'Oppo F3 Smartphone Gold [5.5"  4GB  64GB  13MP  16+8MP  3200mAh]', 
+'price': {'max_price': 32990, 'min_price': 31340.0}, 
+'options': [{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--22933', 
+'title': 'Oppo F3 Smartphone Gold [5.5"  4GB  64GB  13MP  16+8MP  3200mAh]', 
+'image': 'https://sd.azureedge.net/0/images/product/14945/4gold-C-14945.jpg', 
+'price': {'marking_price': 32990, 'selling_price': 31340.0}}, 
+{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--22932', 
+'title': 'Oppo F3 Smartphone Black [5.5"  4GB  64GB  13MP  16+8MP  3200mAh]', 
+'image': 'https://sd.azureedge.net/0/images/product/14945/4black-C-14945.jpg', 
+'price': {'marking_price': 32990, 'selling_price': 31340.0}}]}, 
+
+
+{'id': 12, 'title': 'Oppo F5 Youth Smartphone Gold [6"  3GB  32GB  13MP  16MP  3200mAh]', 
+'price': {'max_price': 27990, 'min_price': 26590.0}, 
+'options': [{'origin': 1, 
+'url': 'https://www.sastodeal.com/sastodeal/pr--22931', 
+'title': 'Oppo F5 Youth Smartphone Gold [6"  3GB  32GB  13MP  16MP  3200mAh]', 
+'image': 'https://sd.azureedge.net/0/images/product/14944/5gold-C-14944.jpg', 
+'price': {'marking_price': 27990, 'selling_price': 26590.0}}, 
+{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--22930', 
+'title': 'Oppo F5 Youth Smartphone Black [6"  3GB  32GB  13MP  16MP  3200mAh]', 
+'image': 'https://sd.azureedge.net/0/images/product/14944/5black-C-14944.jpg', 
+'price': {'marking_price': 27990, 'selling_price': 26590.0}}]}, 
+
+
+{'id': 13, 'title': 'Oppo A57 Smartphone Gold [5.2"  3GB  32GB  13MP  16MP  2900mAh]', 
+'price': {'max_price': 24990, 'min_price': 23740.0}, 
+'options': [{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--22929', 
+'title': 'Oppo A57 Smartphone Gold [5.2"  3GB  32GB  13MP  16MP  2900mAh]', 
+'image': 'https://sd.azureedge.net/0/images/product/14943/7gold-C-14943.jpg', 
+'price': {'marking_price': 24990, 'selling_price': 23740.0}}, 
+{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--22928', 
+  'title': 'Oppo A57 Smartphone Black [5.2"  3GB  32GB  13MP  16MP  2900mAh]', 
+  'image': 'https://sd.azureedge.net/0/images/product/14943/7black-C-14943.jpg', 
+  'price': {'marking_price': 24990, 'selling_price': 23740.0}}]}, 
+
+
+{'id': 14, 'title': "Oppo A71 Smartphone Gold [5.2'  3GB  16GB  13MP  5MP  3000mAH]", 
+  'price': {'max_price': 21990, 'min_price': 20890.0}, 
+  'options': [{'origin': 1, 
+    'url': 'https://www.sastodeal.com/sastodeal/pr--22927', 
+    'title': "Oppo A71 Smartphone Gold [5.2'  3GB  16GB  13MP  5MP  3000mAH]", 
+    'image': 'https://sd.azureedge.net/0/images/product/14942/6gold-C-14942.jpg', 
+    'price': {'marking_price': 21990, 'selling_price': 20890.0}}, 
+    {'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--22926', 
+    'title': "Oppo A71 Smartphone Black [5.2'  3GB  16GB  13MP  5MP  3000mAH]", 
+    'image': 'https://sd.azureedge.net/0/images/product/14942/6black-C-14942.jpg', 
+    'price': {'marking_price': 21990, 'selling_price': 20890.0}}]}, 
+
+
+{'id': 15, 'title': 'Oppo A37F Smartphone Gold [5"   2GB  16GB  8MP  5MP  2360mAh]', 
+'price': {'max_price': 15590, 'min_price': 14810.0}, 
+'options': [{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--22925', 
+'title': 'Oppo A37F Smartphone Gold [5"   2GB  16GB  8MP  5MP  2360mAh]', 
+'image': 'https://sd.azureedge.net/0/images/product/14941/8gold-C-14941.jpg', 
+'price': {'marking_price': 15590, 'selling_price': 14810.0}}, 
+{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--22924', 'title': 'Oppo A37F Smartphone Black [5"   2GB  16GB  8MP  5MP  2360mAh]', 'image': 'https://sd.azureedge.net/0/images/product/14941/8black-C-14941.jpg', 'price': {'marking_price': 15590, 'selling_price': 14810.0}}]}, {'id': 16, 'title': 'Oppo A83 Smartphone Black [5.7"  3GB  32GB  13MP  3180mAh]', 'price': {'max_price': 23990, 'min_price': 22310.0}, 'options': [{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--22943', 'title': 'Oppo A83 Smartphone Black [5.7"  3GB  32GB  13MP  3180mAh]', 'image': 'https://sd.azureedge.net/0/images/product/14940/black-C-14940.jpg', 'price': {'marking_price': 23990, 'selling_price': 22310.0}}, {'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--22923', 'title': 'Oppo A83 Smartphone Champagne [5.7"  3GB  32GB  13MP  3180mAh]', 'image': 'https://sd.azureedge.net/0/images/product/14940/2a-C-14940.jpg', 'price': {'marking_price': 23990, 'selling_price': 22310.0}}]}, {'id': 17, 'title': 'Oppo in-Ear Headphone', 'price': {'max_price': 1500, 'min_price': 1500.0}, 'options': [{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--7094', 'title': 'Oppo in-Ear Headphone', 'image': 'https://sd.azureedge.net/0/images/product/4024/20659-p-0.jpg', 'price': {'marking_price': 1500, 'selling_price': 1500.0}}]}, {'id': 18, 'title': 'Oppositional Politics In Nepal', 'price': {'max_price': 300, 'min_price': 255.0}, 'options': [{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--48353', 'title': 'Oppositional Politics In Nepal', 'image': 'https://sd.azureedge.net/0/images/noImage.jpg', 'price': {'marking_price': 300, 'selling_price': 255.0}}]}, {'id': 19, 'title': 'Oppo USB Cable 1.0m', 'price': {'max_price': 600, 'min_price': 450.0}, 'options': [{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--4799', 'title': 'Oppo USB Cable 1.0m', 'image': 'https://sd.azureedge.net/0/images/product/2981/12903-p-0.jpg', 'price': {'marking_price': 600, 'selling_price': 450.0}}]}, {'id': 20, 'title': 'Character Opportunities Timidity', 'price': {'max_price': 319, 'min_price': 271.0}, 'options': [{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--13775', 'title': 'Character Opportunities Timidity', 'image': 'https://sd.azureedge.net/0/images/product/8859/SD-SD-684-p-0.jpg', 'price': {'marking_price': 319, 'selling_price': 271.0}}, {'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--51544', 'title': 'Character Opportunities Timidity', 'image': 'https://sd.azureedge.net/0/images/product/38760/Trilogy-SB-25161-p-0.jpg', 'price': {'marking_price': 319, 'selling_price': 271.0}}]}, {'id': 21, 'title': 'Learn Opposites Ready For School Language And Literacy Development', 'price': {'max_price': 200, 'min_price': 170.0}, 'options': [{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--37406', 'title': 'Learn Opposites Ready For School Language And Literacy Development', 'image': 'https://sd.azureedge.net/0/images/noImage.jpg', 'price': {'marking_price': 200, 'selling_price': 170.0}}]}, {'id': 22, 'title': 'My First Opposites', 'price': {'max_price': 400, 'min_price': 340.0}, 'options': [{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--38135', 'title': 'My First Opposites', 'image': 'https://sd.azureedge.net/0/images/noImage.jpg', 'price': {'marking_price': 400, 'selling_price': 340.0}}]}, {'id': 23, 'title': 'Double Magic Opposites', 'price': {'max_price': 120, 'min_price': 102.0}, 'options': [{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--35945', 'title': 'Double Magic Opposites', 'image': 'https://sd.azureedge.net/0/images/noImage.jpg', 'price': {'marking_price': 120, 'selling_price': 102.0}}]}, {'id': 24, 'title': 'Colours And Opposites Wipe And Use', 'price': {'max_price': 100, 'min_price': 85.0}, 'options': [{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--35631', 'title': 'Colours And Opposites Wipe And Use', 'image': 'https://sd.azureedge.net/0/images/noImage.jpg', 'price': {'marking_price': 100, 'selling_price': 85.0}}]}, {'id': 25, 'title': 'Crisis as Opportunity 01 Edition', 'price': {'max_price': 312, 'min_price': 265.0}, 'options': [{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--19011', 'title': 'Crisis as Opportunity 01 Edition', 'image': 'https://sd.azureedge.net/0/images/noImage.jpg', 'price': {'marking_price': 312, 'selling_price': 265.0}}]}, {'id': 26, 'title': 'Mini Board Books Opposites', 'price': {'max_price': 100, 'min_price': 85.0}, 'options': [{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--37948', 'title': 'Mini Board Books Opposites', 'image': 'https://sd.azureedge.net/0/images/noImage.jpg', 'price': {'marking_price': 100, 'selling_price': 85.0}}]}, {'id': 27, 'title': 'Ben 10 Omniverse Opposites', 'price': {'max_price': 216, 'min_price': 184.0}, 'options': [{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--35005', 'title': 'Ben 10 Omniverse Opposites', 'image': 'https://sd.azureedge.net/0/images/noImage.jpg', 'price': {'marking_price': 216, 'selling_price': 184.0}}]}, {'id': 28, 'title': 'My First Book Of Opposites', 'price': {'max_price': 475, 'min_price': 404.0}, 'options': [{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--38120', 'title': 'My First Book Of Opposites', 'image': 'https://sd.azureedge.net/0/images/noImage.jpg', 'price': {'marking_price': 475, 'selling_price': 404.0}}]}, {'id': 29, 'title': 'My First Book Of Opposites', 'price': {'max_price': 100, 'min_price': 85.0}, 'options': [{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--38119', 'title': 'My First Book Of Opposites', 'image': 'https://sd.azureedge.net/0/images/noImage.jpg', 'price': {'marking_price': 100, 'selling_price': 85.0}}]}, {'id': 30, 'title': 'Whatever You Think Think The Opposite', 'price': {'max_price': 703, 'min_price': 598.0}, 'options': [{'origin': 1, 'url': 'https://www.sastodeal.com/sastodeal/pr--52437', 'title': 'Whatever You Think Think The Opposite', 'image': 'https://sd.azureedge.net/0/images/product/39653/Trilogy-SB-26054-p-0.jpg', 'price': {'marking_price': 703, 'selling_price': 598.0}}]}]

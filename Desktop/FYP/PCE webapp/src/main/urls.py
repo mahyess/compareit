@@ -1,12 +1,12 @@
 from django.urls import path, re_path, include
 from .views import (
     home,
-    allproducts,
-    search
+    search,
+    product
 )
 
 urlpatterns = [
     path('', home, name='home'),
-    path('allproducts', allproducts, name='allproducts'),
-    path('search/<str:query>/', search, name='search' )
+    path('search/<str:query>/', search, name='search' ),
+    re_path(r'^item/(?:(?P<id>[\d\-]+)/)?$', product, name='product'),
 ]
