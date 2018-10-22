@@ -1,12 +1,6 @@
 # from fuzzywuzzy import fuzz
 # from fuzzywuzzy import process
 
-# print(fuzz.token_set_ratio('Oppo F7 Smart Mobile Phone - [4GB 64GB 3400mAh]', ''))
+# print(fuzz.token_set_ratio('Samsung Galaxy Note 5 Duos', 'Samsung Galaxy Note5 Duos Smart Mobile Phone 4GB 16MP 32GB'))
 
-a = []
-for i in range(10):
-	a.append(i+1)
-
-b = '2'
-
-print(a[int(b)])
+print(bool(0+0))

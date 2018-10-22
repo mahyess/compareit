@@ -7,7 +7,7 @@ def product_match(base_title, base_price, query_title, query_price):
 
 def title_match(bt, qt):
 	pt = fuzz.token_set_ratio(bt, qt)
-	pr = True if pt >= 90 else False
+	pr = True if pt >= 80 else False
 	return pr
 
 def price_match(bp, qp):
@@ -17,7 +17,7 @@ def price_match(bp, qp):
 	qh = qp + 0.1 * qp
 	ql = qp - 0.1 * qp
 	qr = True if ql <= bp <= qh else False
-	return bool(br * qr)
+	return bool(br + qr)
 
 def df_title(dt, nt):
 	return dt if len(dt) < len(nt) else nt

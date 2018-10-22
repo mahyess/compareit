@@ -8,33 +8,38 @@ import json
 
 data = []
 
-def home(request):
-    # data = None
-    context = {
-        'title' : 'Home',
-    }
-    return render(request, 'main/dashboard.html', context)
-
 # def search(request, query):
 #     data = daraz_search(query)
 #     return JsonResponse(json.loads(data))
 # for api based
 
-def search(request, query):
+def search(request):
     global data
+    query = request.GET.get('q')
     data = scraper(query)
-    # print(data)
+    print(data)
     context = {
-        'title' : 'CompareIt' + ' - ' + 'Home',
+        'title' : 'CompareIt' + ' - ' + query,
         'data': data
     }
-    return render(request, 'main/home.html', context)
+    return render(request, 'main/home.html', context)   
+
+def home(request):
+    if "q" in request.GET:
+        search(request)
+    else:
+        context = {
+            'title' : 'CompareIt' + ' - ' + 'Home',
+        }
+        return render(request, 'main/dashboard.html', context) 
 
 def product(request, id):
-    print(len(data))
-    item = data[int(id)]
-    context = {
-        'title': 'CompareIt' + ' - ' + item['title'],
-        'data': item
-    }
-    return render(request, 'item/item.html', context)
+    if "q" in request.GET:
+        search(request)
+    else:
+        item = data[int(id)]
+        context = {
+            'title': 'CompareIt' + ' - ' + item['title'],
+            'data': item
+        }
+        return render(request, 'item/item.html', context)
