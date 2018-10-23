@@ -48,18 +48,18 @@
 					
 					<div class="preview-pic tab-content carousel-inner" role="listbox">
 						
-						{% for image in images %}
+						{% for option in item.options %}
 							
 							<div {% if forloop.counter == 1 %} class="carousel-item tab-pane active" "{% else %} class="carousel-item tab-pane" {% endif %} id="pic-{{forloop.counter}}">
 							
-							<img class="d-block w-100" src="{{image.image.url}}" width="200px" height="400px" alt="">
+							<img class="d-block w-100" src="{{option.image}}" width="200px" height="400px" alt="">
 						</div>
 					{% endfor %}
 				</div>
 				<ul class="preview-thumbnail nav nav-tabs">
-					{% for image in images %}
+					{% for option in item.options %}
 						<li {% if forloop.counter == 1 %} class="active" {% endif %}>
-						<a data-target="#pic-{{forloop.counter}}" data-toggle="tab"><img src="{{image.image.url}}" alt=""></a>
+						<a data-target="#pic-{{forloop.counter}}" data-toggle="tab"><img src="{{option.image}}" alt=""></a>
 					</li>
 				{% endfor %}
 			</ul>
@@ -79,106 +79,19 @@
 			</div>
 			<p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.</p>
 			
-			
-			{% if item.id == 1 %}
+			{% for option in item.options %}
 				<div class="row">
 					
 					<a href="http://localhost/prestashop/index.php?id_product=20&id_product_attribute=0&rewrite=iphone-x&controller=product" class="row btn btn-outline-success price justify-content-center ml-3" width="50%">
 						<span class="col-md-2">
 							<img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Nederland_1_Logo_2000.png" width="36" height="36" alt="">
 						</span>
-						<span class="col-md-10">Price: <span>Rs. {{item.price}}</span></span>
+						<span class="col-md-10">Price: <span>Rs. {{option.price.marking_price}} - {{option.price.selling_price}}</span></span>
 					</a>
 					
 				</div>
-				<div class="row">
-					
-					<a href="#" class="row btn btn-outline-warning price justify-content-center ml-3" width="50%">
-						<span class="col-md-2">
-							<img src="https://static1.squarespace.com/static/5383a76de4b06dea6734f421/t/53d69fd0e4b049ef1388434e/1406758250399/2+logo" width="36" height="36" alt="">
-						</span>
-						<span class="col-md-10">Price: <span>Rs. 105000.00</span></span>
-					</a>
-					
-				</div>
-				<div class="row">
-					
-					<a href="#" class="row btn btn-outline-warning price justify-content-center ml-3" width="50%">
-						<span class="col-md-2">
-							<img src="https://img00.deviantart.net/e3cc/i/2005/109/c/c/_3_logo_by_thedsw.png" width="36" height="36" alt="">
-						</span>
-						<span class="col-md-10">Price: <span>Rs. 110000.00</span></span>
-					</a>
-					
-				</div>
-				{% elif item.id == 2 %}
-				<div class="row">
-					
-					<a href="http://localhost/store3/index.php?id_product=22&id_product_attribute=0&rewrite=samsung-note-9&controller=product"" class="row btn btn-outline-success price justify-content-center ml-3" width="50%">
-						<span class="col-md-2">
-							<img src="https://img00.deviantart.net/e3cc/i/2005/109/c/c/_3_logo_by_thedsw.png" width="36" height="36" alt="">
-						</span>
-						<span class="col-md-10">Price: <span>Rs. {{item.price}}</span></span>
-					</a>
-					
-				</div>
-				<div class="row">
-					
-					<a href="#" class="row btn btn-outline-warning price justify-content-center ml-3" width="50%">
-						<span class="col-md-2">
-							<img src="https://static1.squarespace.com/static/5383a76de4b06dea6734f421/t/53d69fd0e4b049ef1388434e/1406758250399/2+logo" width="36" height="36" alt="">
-						</span>
-						<span class="col-md-10">Price: <span>Rs. 100000.00</span></span>
-					</a>
-					
-				</div>
-				<div class="row">
-					
-					<a href="#" class="row btn btn-outline-warning price justify-content-center ml-3" width="50%">
-						<span class="col-md-2">
-							<img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Nederland_1_Logo_2000.png" width="36" height="36" alt="">
-						</span>
-						<span class="col-md-10">Price: <span>Rs. 102000.00</span></span>
-					</a>
-					
-				</div>
-				
-				
-				
-				{% elif item.id == 3 %}
-				<div class="row">
-					
-					<a href="http://localhost/store2/index.php?id_product=21&id_product_attribute=0&rewrite=oneplus-6&controller=product" class="row btn btn-outline-success price justify-content-center ml-3" width="50%">
-						<span class="col-md-2">
-							<img src="https://static1.squarespace.com/static/5383a76de4b06dea6734f421/t/53d69fd0e4b049ef1388434e/1406758250399/2+logo" width="36" height="36" alt="">
-						</span>
-						<span class="col-md-10">Price: <span>Rs. {{item.price}}</span></span>
-					</a>
-					
-				</div>
-				<div class="row">
-					
-					<a href="#" class="row btn btn-outline-warning price justify-content-center ml-3" width="50%">
-						<span class="col-md-2">
-							<img src="https://img00.deviantart.net/e3cc/i/2005/109/c/c/_3_logo_by_thedsw.png" width="36" height="36" alt="">
-						</span>
-						<span class="col-md-10">Price: <span>Rs. 65000.00</span></span>
-					</a>
-					
-				</div>
-				<div class="row">
-					
-					<a href="#" class="row btn btn-outline-warning price justify-content-center ml-3" width="50%">
-						<span class="col-md-2">
-							<img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Nederland_1_Logo_2000.png" width="36" height="36" alt="">
-						</span>
-						<span class="col-md-10">Price: <span>Rs. 67500.00</span></span>
-					</a>
-					
-				</div>
-				
-				
-			{% endif %}
+			{% endfor %}
+			
 			
 			<hr width="70%">
 			<div id="features">

@@ -28,36 +28,38 @@
 	.star-rating i {font-size: 14px;color: #ffc000;}
 	</style>
 	
-	
-	<div class="item carousel-item active">
-		<div class="row">
-			{% for value in data %}
-				<div class="col-sm-3">
-					<a href="{% url 'product' id=value.id %}">
-						<div class="thumb-wrapper">
-							<div class="img-box">
-								<img src="{{value.image}}" class="img-responsive img-fluid" alt="">
-							</div>
-							<div class="thumb-content">
-								<h4>{{value.title}}</h4>
-								<p class="item-price"><strike>{{value.price.max_price}}</strike> <span>{{value.price.min_price}}</span></p>
-								<div class="star-rating">
-									<ul class="list-inline">
-										<li class="list-inline-item"><i class="fa fa-star"></i></li>
-										<li class="list-inline-item"><i class="fa fa-star"></i></li>
-										<li class="list-inline-item"><i class="fa fa-star"></i></li>
-										<li class="list-inline-item"><i class="fa fa-star"></i></li>
-										<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-									</ul>
+	<div class="card">
+		
+		
+		<div class="item carousel-item active">
+			<div class="row">
+				{% for value in data %}
+					<div class="col-sm-3">
+						<a href="{% url 'product' id=value.id %}">
+							<div class="thumb-wrapper">
+								<div class="img-box">
+									<img src="{{value.image}}" class="img-responsive img-fluid" alt="">
 								</div>
-								<!-- <a href="{{value}}" class="btn btn-primary">Add to Cart</a> -->
+								<div class="thumb-content">
+									<h4>{{value.title}}</h4>
+									<p class="item-price"><strike>{{value.price.max_price}}</strike> <span>{{value.price.min_price}}</span></p>
+									<div class="star-rating">
+										<ul class="list-inline">
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star"></i></li>
+											<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+										</ul>
+									</div>
+									<!-- <a href="{{value}}" class="btn btn-primary">Add to Cart</a> -->
+								</div>
 							</div>
-						</div>
-					</a>
-				</div>
-			{% endfor %}
+						</a>
+					</div>
+				{% endfor %}
+			</div>
 		</div>
 	</div>
-	
 	
 {% endblock %}

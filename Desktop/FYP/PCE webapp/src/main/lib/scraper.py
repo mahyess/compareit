@@ -289,6 +289,7 @@ def muncha_search(query):
 
 def main(query):
     # query = input('Enter Search Query:')
+    search_results.clear()
     daraz_search(query)
     sastodeal_search(query)
     muncha_search(query)
