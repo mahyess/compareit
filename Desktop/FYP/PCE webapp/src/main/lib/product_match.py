@@ -52,12 +52,13 @@ def clean_scrap_data(scrap):
 				# for update of title, if valid
 				cleaned_scrap_data[idy]['title'] = df_title(cleaned_scrap_data[idy]['title'], scrap[idx]['details']['title'])
 				# for update of outside prices
-				if scrap[idx]['details']['price']['marking_price'] is not None:
+				if scrap[idx]['details']['price']['marking_price'] is None:
 					# for max price, if marking price exists in scraped data
-					cleaned_scrap_data[idy]['price']['max_price'] = max_df_price(cleaned_scrap_data[idy]['price']['max_price'], scrap[idx]['details']['price']['marking_price'])
-				else:
-					# for max price, if marking price doesn't exist in scraped data
 					cleaned_scrap_data[idy]['price']['max_price'] = max_df_price(cleaned_scrap_data[idy]['price']['max_price'], scrap[idx]['details']['price']['selling_price'])
+
+				else:
+					cleaned_scrap_data[idy]['price']['max_price'] = max_df_price(cleaned_scrap_data[idy]['price']['max_price'], scrap[idx]['details']['price']['marking_price'])
+					# for max price, if marking price doesn't exist in scraped data
 				# for min price
 				cleaned_scrap_data[idy]['price']['min_price'] = min_df_price(cleaned_scrap_data[idy]['price']['min_price'], scrap[idx]['details']['price']['selling_price'])
 				break
@@ -67,7 +68,7 @@ def clean_scrap_data(scrap):
 				'id': len(cleaned_scrap_data),
 				'title': scrap[idx]['details']['title'],
 				'price': {
-					'max_price': scrap[idx]['details']['price']['marking_price'],
+					'max_price': scrap[idx]['details']['price']['marking_price'] if bool(scrap[idx]['details']['price']['marking_price']) else scrap[idx]['details']['price']['selling_price'],
 					'min_price': scrap[idx]['details']['price']['selling_price']
 					},
 				'image': scrap[idx]['details']['image'],
@@ -86,6 +87,7 @@ def clean_scrap_data(scrap):
 		# print(item)
 
 def main(query):
+	cleaned_scrap_data.clear()
 	clean_scrap_data(scraper(query))
 	data = cleaned_scrap_data
 	# print(data)

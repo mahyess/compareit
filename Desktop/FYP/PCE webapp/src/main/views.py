@@ -7,7 +7,24 @@ from .lib.product_match import main as scraper
 # Create your views here.
 
 data = []
-
+logo = {
+  "0": {
+    "name": "daraz",
+    "logo": "https://laz-img-cdn.alicdn.com/images/ims-web/TB1eIwbmljTBKNjSZFuXXb0HFXa.png"
+  },
+  "1": {  
+    "name": "sastodeal",
+    "logo": 'https://www.sastodeal.com/0/media/css/frontend/images/logo.png'
+  },
+  "2": {
+    "name": "nepbay",
+    "logo": "https://nepbay.com/uploads/2018082815354524400.svg"
+  },
+  "3": {
+    "name": "muncha",
+    "logo": "https://www.muncha.com/assets/images/logo.gif"
+  }
+}
 # def search(request, query):
 #     data = daraz_search(query)
 #     return JsonResponse(json.loads(data))
@@ -18,6 +35,7 @@ def search(request):
     global data
     query = request.GET.get('q')
     if query:
+        data.clear()
         data = scraper(query)
         print(data)
         context = {
@@ -42,8 +60,10 @@ def product(request, id):
         return search(request)
 
     item = data[int(id)]
+
     context = {
         'title': item['title'],
-        'item': item
+        'item': item,
+        'logo': logo
     }
     return render(request, 'item/item.html', context)

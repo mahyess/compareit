@@ -119,7 +119,7 @@ def daraz_search(query):
                     "image": item['image'],
                     "price": {
                         "selling_price": float(item['price']),
-                        "marking_price": float(item['originalPrice'])
+                        "marking_price": float(item['originalPrice']) if 'originalPrice' in item else None
                     } 
                 }})
 
