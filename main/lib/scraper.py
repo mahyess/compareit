@@ -8,12 +8,14 @@ import urllib.parse as urlparse
 from urllib.parse import urlencode
 # import urllib2
 
-stores = ['Daraz', 'Sastodeal', 'NepBay', 'Muncha']
+stores = ['Daraz', 'Sastodeal', 'NepBay', 'Muncha', 'Gyapu']
 url_list = {
     'Daraz': 'https://www.daraz.com.np/catalog/?q=', 
     'Sastodeal': 'https://www.sastodeal.com/search.html?q=', 
     'NepBay': 'https://nepbay.com/shopping/search?q=',
-    'Muncha': 'http://www.shop.muncha.com/Search.aspx?MID=1&q='}
+    'Muncha': 'http://www.shop.muncha.com/Search.aspx?MID=1&q='
+    'Gyapu': 'https://www.gyapu.com/api/search?q='
+}
 
 # daraz_search_results = []
 # sastodeal_search_results = []
@@ -21,95 +23,31 @@ url_list = {
 # muncha_search_results = []
 
 search_results = []
+def fetch(url, data=None):
+    if data is None:
+        return s.get(url).content
+    else:
+        return s.post(url, data=data).content
 
-# def daraz_search(query):
-#     req = requests.get(url_list['Daraz'])
-#     soup = BeautifulSoup(req.content, 'lxml')
-#     print(soup)
-
-#     URL = url_list['Daraz'] + query.replace(" ", "+")
-#     s = requests.Session()
-
-#     def fetch(url, data=None):
-#         if data is None:
-#             return s.get(url).content
-#         else:
-#             return s.post(url, data=data).content
-
-#     soup = BeautifulSoup(fetch(URL), 'lxml')
-#     print(soup.prettify())
-#     skus = soup.find_all('div', {'data-qa-locator': 'product-item'})
-#     # searchfield = soup.find('input', {'id': 'header-search-input'})
-#     for idx,sku in enumerate(skus):
-#         print(sku)
-#         # for link
-#         link = sku.find('a', {'class': 'link'})['href'] #working :)
-
-#         # for image
-#         # imagediv = sku.find('div', {'class': 'image-wrapper'})
-#         image = sku.find('img')['src'] #working just fine ^_^
-
-#         # for title
-#         title = sku.find('img')['alt']
-#         # title = title_h2.find('span', {'class': 'name'}).get_text() #working as charm ;)
-
-#         # for price
-#         price_div = sku.find('div', {'price-container'}).find('span', {'class': 'price-box'})
-#         price_spans = price_div.find_all('span', {'dir': 'ltr'})
-
-#         prices = []
-#         for price_span in price_spans:
-#             prices.append(price_span['data-price']) #donejo working \m/
-#         # one or two values may be present
-#         # if one, that's the selling price
-#         # if two, one is selling price, other is marked price
-
-#         if len(prices) is 1:
-#             prices.append(None)
-
-#         daraz_search_results.append({
-#             "id": idx, 
-#             "url": link,
-#             "title": title,
-#             "image": image,
-#             "price": {
-#                 "selling_price": prices[0],
-#                 "marking_price": prices[1]
-#             } 
-#         })
-#     print(daraz_search_results)
-#     return daraz_search_results
-       
-    # pass
 
 def daraz_search(query):
-    # req = requests.get(url_list['Daraz'])
-    # soup = BeautifulSoup(req.content, 'lxml')
-    # print(soup)
     try:
         URL = url_list['Daraz'] + query.replace(" ", "+")
         s = requests.Session()
 
-        def fetch(url, data=None):
-            if data is None:
-                return s.get(url).content
-            else:
-                return s.post(url, data=data).content
-
         soup = BeautifulSoup(fetch(URL), 'lxml')
-        # print(soup.prettify())
         scripts = soup.find_all('script')
-        # for i in scripts:
-        #     print(i)
-        #     print('---------------')
-        script = str(scripts[2].get_text()).replace('window.pageData=', '').strip()
-        # script = script.encode("utf-8")
+        script = None
+        for script in scripts:
+            if ('window.pageData=' in str(script.string)):
+                # daraz has search results in json string with 'window.pageData=' appended to it
+                break
         
-        _script = json.dumps(script, sort_keys=True, indent=4, separators=(',', ': '))
-        _data = json.loads(json.loads(_script))
-        data = _data['mods']['listItems']
+        data = script.string.replace('window.pageData=', '').strip()  # remove appended string
+        data = json.loads(data)  # convert to json
+        data = data['mods']['listItems']  # just need data inside this array/attribute, throw everything else
 
-        for item in data:
+        for item in data:  # loop through this array
             search_results.append({
                 "id": item['nid'],
                 "details": {
@@ -121,10 +59,10 @@ def daraz_search(query):
                         "selling_price": float(item['price']),
                         "marking_price": float(item['originalPrice']) if 'originalPrice' in item else None
                     } 
-                }})
-
-        # return data
-    except:
+                }})  # append the results to search result for display
+        
+    except Exception as e:
+        print(e)
         print('Daraz: Error in Connection')
         pass
         # return data
@@ -135,62 +73,29 @@ def sastodeal_search(query):
     try:
         URL = url_list['Sastodeal'] + query.replace(" ", "%20")
 
-        xhr_url = 'https://y942squ1t6-3.algolianet.com/1/indexes/*/queries?'
-        _params = {
-                "x-algolia-agent": "Algolia for vanilla JavaScript (lite) 3.21.1;instantsearch.js 1.11.15;JS Helper 2.19.0",
-                "x-algolia-application-id": "Y942SQU1T6",
-                "x-algolia-api-key": "849f864925ae4100bfe5863e46712b33"
-            }
-        url_parts = list(urlparse.urlparse(xhr_url))
-        q = dict(urlparse.parse_qsl(url_parts[4]))
-        q.update(_params)
+        soup = BeautifulSoup(fetch(url), 'lxml')
+        products = soup.find_all('div', {'class': 'product-item-info'})[:-1]
 
-        url_parts[4] = urlencode(q)
-
-        xhr_url = urlparse.urlunparse(url_parts)
-
-        # xhr_url = 'https://y942squ1t6-dsn.algolia.net/1/indexes/*/queries?x-algolia-agent=Algolia%20for%20vanilla%20JavaScript%20(lite)%203.21.1%3Binstantsearch.js%201.11.15%3BJS%20Helper%202.19.0&x-algolia-application-id=Y942SQU1T6&x-algolia-api-key=849f864925ae4100bfe5863e46712b33'
-        with requests.Session() as session:
-            session.get(URL)
-            
-            _data =json.dumps({"requests":
-                [
-                    {
-                        "indexName": "sastodeal_products",
-                        'query': query,
-                    }
-                ]
+        for item in products:
+            sp = item.find('span', {'data-price-type': "oldPrice"})
+            if sp:
+                sp = sp['data-price-amount']
+            search_results.append({
+                "id": random.randint(1,999),
+                "details": {
+                    "origin": 1,
+                    "url": item.find('a', {'class': "product-item-link"})['href'],
+                    "title": item.find('a', {'class': "product-item-link"}).string,
+                    "image": item.find('img', {'class': "product-image-photo"})['src'],
+                    "price": {
+                        "selling_price": float(item.find('span', {'data-price-type': "finalPrice"})['data-price-amount']),
+                        "marking_price": float(sp) if sp else 0
+                    } 
+                }
             })
-
-            response = session.post(xhr_url, data=_data)
-            # print(response.content)
-
-            j = json.loads(response.content)
-            sastodeal_search_unclean = json.dumps(j, sort_keys=True, indent=4)
-            # print(sastodeal_search_unclean)
             
-            _sastodeal_search = json.loads(sastodeal_search_unclean)
-            # print(type(sastodeal_search))
-
-
-            data = _sastodeal_search['results'][0]['hits']
-
-            for item in data:
-                search_results.append({
-                    "id": item['id'],
-                    "details": {
-                        "origin": 1,
-                        "url": "https://www.sastodeal.com/sastodeal/pr--" + item['pilId'],
-                        "title": item['name'],
-                        "image": item['image'],
-                        "price": {
-                            "selling_price": float(item['price']),
-                            "marking_price": item['mrp']
-                        } 
-                    }})
-
-            # return sastodeal_search['results']
-    except:
+    except Exception as e:
+        print(e, 'here')
         print('Sastodeal: Error in Connection')
         pass
 
@@ -198,12 +103,6 @@ def nepbay_search(query):
     try:
         URL = url_list['NepBay'] + query.replace(" ", "+")
         s = requests.Session()
-
-        def fetch(url, data=None):
-            if data is None:
-                return s.get(url).content
-            else:
-                return s.post(url, data=data).content
 
         soup = BeautifulSoup(fetch(URL), 'lxml')
         # print(soup)
@@ -240,12 +139,6 @@ def muncha_search(query):
     try:
         URL = url_list['Muncha'] + query.replace(" ", "+")
         s = requests.Session()
-
-        def fetch(url, data=None):
-            if data is None:
-                return s.get(url).content
-            else:
-                return s.post(url, data=data).content
 
         soup = BeautifulSoup(fetch(URL), 'lxml')
         panels = soup.find_all('div', {'class': 'panel panel-default'})
@@ -287,15 +180,40 @@ def muncha_search(query):
         print('Muncha: Error in Connection')
         pass
 
+def gyapu_search(query):
+    try:
+        URL = url_list['Gyapu'] + query.replace(" ", "%20")
+
+        soup = fetch(url)
+        products = json.loads(response)['data']['products']
+        for item in products:
+            for variant in item['variant']:
+                search_results.append({
+                    "id": variant['variant_type'][0]['value'] if len(variant['variant_type']) else item['_id'],
+                    "details": {
+                        "origin": 4,
+                        "url": f"https://www.gyapu.com/detail/{item['url_key']}",
+                        "title": f"{item['name']} + {variant['variant_type'][0]['value'] if len(variant['variant_type']) else ''}",
+                        "image": f"https://www.gyapu.com/{item['image'][0]['document']['path']}",
+                        "price": {
+                            "selling_price": float(variant['price']),
+                            "marking_price": float(variant['sales_price'])
+                        } 
+                    }
+                })
+
+    except Exception as e:
+        print(e, 'here')
+        print('Sastodeal: Error in Connection')
+        pass
+
 def main(query):
-    # query = input('Enter Search Query:')
     search_results.clear()
     daraz_search(query)
     sastodeal_search(query)
     muncha_search(query)
     nepbay_search(query)
-
-    # print(search_results)
+    gyapu_search(query)
 
     return(search_results)
 

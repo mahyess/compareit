@@ -37,7 +37,6 @@ def search(request):
     if query:
         data.clear()
         data = scraper(query)
-        print(data)
         context = {
             'title': query,
             'data': data
