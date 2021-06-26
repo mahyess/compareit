@@ -13,7 +13,7 @@ url_list = {
     'Daraz': 'https://www.daraz.com.np/catalog/?q=', 
     'Sastodeal': 'https://www.sastodeal.com/search.html?q=', 
     'NepBay': 'https://nepbay.com/shopping/search?q=',
-    'Muncha': 'http://www.shop.muncha.com/Search.aspx?MID=1&q='
+    'Muncha': 'http://www.shop.muncha.com/Search.aspx?MID=1&q=',
     'Gyapu': 'https://www.gyapu.com/api/search?q='
 }
 
@@ -24,6 +24,7 @@ url_list = {
 
 search_results = []
 def fetch(url, data=None):
+    s = requests.Session()
     if data is None:
         return s.get(url).content
     else:
@@ -33,8 +34,7 @@ def fetch(url, data=None):
 def daraz_search(query):
     try:
         URL = url_list['Daraz'] + query.replace(" ", "+")
-        s = requests.Session()
-
+        
         soup = BeautifulSoup(fetch(URL), 'lxml')
         scripts = soup.find_all('script')
         script = None
@@ -73,7 +73,7 @@ def sastodeal_search(query):
     try:
         URL = url_list['Sastodeal'] + query.replace(" ", "%20")
 
-        soup = BeautifulSoup(fetch(url), 'lxml')
+        soup = BeautifulSoup(fetch(URL), 'lxml')
         products = soup.find_all('div', {'class': 'product-item-info'})[:-1]
 
         for item in products:
@@ -184,8 +184,8 @@ def gyapu_search(query):
     try:
         URL = url_list['Gyapu'] + query.replace(" ", "%20")
 
-        soup = fetch(url)
-        products = json.loads(response)['data']['products']
+        soup = fetch(URL)
+        products = json.loads(soup)['data']['products']
         for item in products:
             for variant in item['variant']:
                 search_results.append({
@@ -204,7 +204,7 @@ def gyapu_search(query):
 
     except Exception as e:
         print(e, 'here')
-        print('Sastodeal: Error in Connection')
+        print('Gyapu: Error in Connection')
         pass
 
 def main(query):

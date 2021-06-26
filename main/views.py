@@ -23,6 +23,10 @@ logo = {
   "3": {
     "name": "muncha",
     "logo": "https://www.muncha.com/assets/images/logo.gif"
+  },
+  "4": {
+    "name": "Gyapu",
+    "logo": "https://www.gyapu.com/806b0f041fef60968c877fe5b54014cb.svg"
   }
 }
 # def search(request, query):
