@@ -6,12 +6,13 @@ import lxml
 import json
 import urllib.parse as urlparse
 from urllib.parse import urlencode
+import random
 # import urllib2
 
 stores = ['Daraz', 'Sastodeal', 'NepBay', 'Muncha', 'Gyapu']
 url_list = {
     'Daraz': 'https://www.daraz.com.np/catalog/?q=', 
-    'Sastodeal': 'https://www.sastodeal.com/search.html?q=', 
+    'Sastodeal': 'https://www.sastodeal.com/catalogsearch/result/?q=', 
     'NepBay': 'https://nepbay.com/shopping/search?q=',
     'Muncha': 'http://www.shop.muncha.com/Search.aspx?MID=1&q=',
     'Gyapu': 'https://www.gyapu.com/api/search?q='

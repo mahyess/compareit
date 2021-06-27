@@ -14,7 +14,7 @@ logo = {
   },
   "1": {  
     "name": "sastodeal",
-    "logo": 'https://www.sastodeal.com/0/media/css/frontend/images/logo.png'
+    "logo": 'https://cdn.sastodeal.com/logo/stores/1/SDLogo_White-Logo.png'
   },
   "2": {
     "name": "nepbay",
