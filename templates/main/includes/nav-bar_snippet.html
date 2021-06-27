@@ -1,10 +1,21 @@
 {% load static %}
-<style type="text/css" media="screen">
-.navbar-input {padding: 11px 16px;border-radius: 2px 0 0 2px;border: 0 none;outline: 0 none;    font-size: 15px; width: auto;}
-.navbar-button {background-color: #ffe11b;border: 1px solid #ffe11b;border-radius: 0 2px 2px 0;    color: #565656;padding: 10px 0;width:43px; height: 43px;cursor: pointer;}
-</style>
+<nav class="uk-navbar-container uk-margin" uk-navbar>
+    <div class="uk-navbar-left">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="uk-navbar-item uk-logo" href="#">Logo</a>
+
+        <div class="uk-navbar-item">
+
+            <form method="GET" class="uk-search uk-search-default">
+                <a href="" uk-search-icon></a>
+                <input class="uk-search-input" type="text" placeholder="Search for Products, Brands and more" name="q" value='' type="search" placeholder="" />
+            </form>
+        </div>
+
+    </div>
+</nav>
+
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 	<div class="container row">
 		
 		<a class="navbar-brand col-md-2" href="{% url 'home' %}">
@@ -20,4 +31,4 @@
 			</form>
 		</div>
 	</div>
-</nav>
+</nav> -->

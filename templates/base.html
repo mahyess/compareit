@@ -1,72 +1,40 @@
-<!DOCTYPE html>
-{% load static %}
+<!DOCTYPE html> {% load static %}
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        
-        <title>CompareIt - {{title}}</title>
-        
-        <link rel="favicon" href="{% static 'img/logo.png' %}" />
-        
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-        
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-        
-        <style>
-        /*login.html*/
-        #LoginForm {background-image: url("https://hdwallsource.com/img/2015/9/geometric-wallpaper-48629-50236-hd-wallpapers.jpg");background-repeat: no-repeat; background-position: center; height:600px; background-size: cover; padding: 10px;}
-        .form-heading {color: #fff;font-size: 23px;}
-        .panel h2 {color: #444444;font-size: 18px;margin: 0 0 8px;}
-        .panel p {color: #777777;font-size: 14px;margin-bottom: 30px;line-height: 24px;}
-        .main-div {background: #ffffff none repeat scroll 0 0;border-radius: 2px;margin: 10px auto 20px;max-width: 35%;padding: 30px 30px 60px 31px;}
-        .login-form .form-group {margin-bottom: 10px;}
-        .login-form {text-align: center;}
-        .forgot a {color: #777777;font-size: 14px;text-decoration: underline;}
-        .login-form .btn.btn-primary {color: #ffffff;font-size: 14px;width: 80%;height: 50px;line-height: 50px;padding: 0;}
-        .forgot {text-align: left;margin-bottom: 30px;}
-        .botto-text {color: #ffffff;font-size: 14px;margin: auto;}
-        .login-form .btn.btn-primary.reset {background: #ff9900 none repeat scroll 0 0;}
-        .back {text-align: left;margin-top: 10px;}
-        .back a {color: #444444;font-size: 13px;text-decoration: none;}
-        
-        /*profile.html*/
-        .listing-block{background:#fff; padding-top:10px; overflow-y:scroll;}
-        .lister{padding-top:10px; overflow-y:scroll;}
-        .lister2{padding-top:10px; overflow-y:scroll;}
-        .media {border:1px solid #bcbcbc; background:#fff; position:relative; margin:0 -5px 10px -5px; width: 350px;}
-        .media img{border-right:1px solid #bcbcbc; background:#fff; margin:0; height:100px;}
-        .media-body{height:100px;}
-        .media .title{float:left; width:100%; font-size:16px; font-weight:600; color:#4765AB;}
-        .media .title small{display:block; font-size:14px; color:#232323;}
-        .media .stats{width:100%; }
-        .media .stats span{margin-right:10px; font-size:14px;}
-        .media .stats span i{margin-right:7px; color:#4765AB;}
-        .media .address{width:100%;font-size:14px;  color:#888;}
-        
-        body {
-        font-family: 'open sans';
-        overflow-x: hidden; }
-        </style>
-        
-    </head>
-    {% include "main/includes/nav-bar_snippet.html" %}
-    <body class="container" style="background-color: #DCE0FA;">
-        <div>
-            {% block content %}{% endblock %}
-        </div>
-        
-    </body>
-    <script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>CompareIt - {{title}}</title>
+
+    <link rel="favicon" href="{% static 'img/logo.png' %}" />
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+</head>
+{% include "main/includes/nav-bar_snippet.html" %}
+
+<body>
+    <div class="uk-container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit-icons.min.js"></script>
+<script>
     $(document).ready(function() {
-    $("#itemCarousel").carousel({
-    interval: 3000, //Set AutoPlay to 3 seconds
+        $("#itemCarousel").carousel({
+            interval: 3000, //Set AutoPlay to 3 seconds
+        });
     });
-    });
-    </script>
-    
+</script>
+
 </html>

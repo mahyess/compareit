@@ -1,96 +1,54 @@
-{% extends 'base.html' %}
-{% block title %}{{title}}{% endblock %}
+{% extends 'base.html' %} {% block title %}{{title}}{% endblock %} {% block content %}
 
-{% block content %}
-	
-	
-	<style type="text/css" media="screen">
-	
-	/*****************globals*************/
-	img {max-width: 100%; }
-	.preview {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column; }
-	@media screen and (max-width: 996px) {.preview {margin-bottom: 20px; } }
-	.preview-pic {-webkit-box-flex: 1;-webkit-flex-grow: 1;-ms-flex-positive: 1;flex-grow: 1; }
-	.preview-thumbnail.nav-tabs {border: none;margin-top: 15px; }
-	.preview-thumbnail.nav-tabs li {width: 18%;margin-right: 2.5%; }
-	.preview-thumbnail.nav-tabs li img {max-width: 100%;display: block; }
-	.preview-thumbnail.nav-tabs li a {padding: 0;margin: 0; }
-	.preview-thumbnail.nav-tabs li:last-of-type {margin-right: 0; }
-	.tab-content {overflow: hidden; }
-	.tab-content img {width: 100%;-webkit-animation-name: opacity;animation-name: opacity;-webkit-animation-duration: .3s;animation-duration: .3s; }
-	.card {margin-top: 50px;background: #eee;padding: 3em;line-height: 1.5em; }
-	@media screen and (min-width: 997px) {.wrapper {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex; } }
-	.details {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column; }
-	.colors {-webkit-box-flex: 1;-webkit-flex-grow: 1;-ms-flex-positive: 1;flex-grow: 1; }
-	.product-title, .price, .sizes, .colors {font-weight: bold; }
-	.checked span {color: #ff9f1a; }
-	.product-title, .product-description, .price, .vote, .sizes {margin-bottom: 15px; }
-	.product-title {margin-top: 0; }
-	.size {margin-right: 10px; }
-	.size:first-of-type {margin-left: 40px; }
-	.color {display: inline-block;vertical-align: middle;margin-right: 10px;height: 2em;width: 2em;border-radius: 2px; }.color:first-of-type {margin-left: 20px; }
-	.add-to-cart, .like {background: #ff9f1a;padding: 1.2em 1.5em;border: none;text-transform: UPPERCASE;font-weight: bold;color: #fff;-webkit-transition: background .3s ease;transition: background .3s ease; }.add-to-cart:hover, .like:hover {background: #b36800;color: #fff; }
-	.not-available {text-align: center;line-height: 2em; }.not-available:before {font-family: fontawesome;content: "\f00d";color: #fff; }
-	.orange {background: #ff9f1a; }
-	.green {background: #85ad00; }
-	.blue {background: #0076ad; }
-	.tooltip-inner {padding: 1.3em; }
-	@-webkit-keyframes opacity {0% {opacity: 0;-webkit-transform: scale(3);transform: scale(3); }100% {opacity: 1;-webkit-transform: scale(1);transform: scale(1); } }
-	@keyframes opacity {0% {opacity: 0;-webkit-transform: scale(3);transform: scale(3); }100% {opacity: 1;-webkit-transform: scale(1);transform: scale(1); } }
-		
-	</style>
-	
-	
-	<div class="card">
-		<div class="container-fliud">
-			<div class="wrapper row">
-				<div id="itemCarousel" class="preview col-md-4 carousel slide" data-ride="carousel">
-					<div class="preview-pic tab-content carousel-inner" role="listbox">
-						
-						{% for option in item.options %}
-							
-							<div {% if forloop.first %} class="carousel-item tab-pane active" "{% else %} class="carousel-item tab-pane" {% endif %} id="pic-{{forloop.counter}}">
-							
-							<img class="d-block w-100" src="{{option.image}}" width="200px" height="auto" alt="">
-						</div>
-					{% endfor %}
-				</div>
-				<ul class="preview-thumbnail nav nav-tabs">
-					{% for option in item.options %}
-						<li {% if forloop.first %} class="active" {% endif %}>
-						<a data-target="#pic-{{forloop.counter}}" data-toggle="tab"><img src="{{option.image}}" alt=""></a>
-					</li>
-				{% endfor %}
-			</ul>
-			
-		</div>
-		<div class="details col-md-8">
-			<h3 class="product-title">{{item.title}}</h3>
-			<hr width="100%">
-			
-			{% for option in item.options %}
-				<div class="row">
-					
-					<a href="{{option.url}}" class="row btn btn-outline-success price justify-content-center ml-3" width="50%">
-						<span class="col-md-2">
-							<img src="
-							{% if option.origin == 0 %} {{logo.0.logo}}
-								{% elif option.origin == 1 %} {{logo.1.logo}}
-								{% elif option.origin == 2 %} {{logo.2.logo}}
-								{% elif option.origin == 3 %} {{logo.3.logo}}
-								{% elif option.origin == 4 %} {{logo.4.logo}}
-							{% endif %}							
-							" height="36" alt="">
-							
-							
-						</span>
-						<span class="col-md-10">Price: <span>Rs. {{option.price.marking_price}} - {{option.price.selling_price}}</span></span>
-					</a>
-				</div>
-			{% endfor %}
-		</div>
-	</div>
+
+<div uk-grid>
+    <div class="uk-width-2-3">
+        <div class="uk-card uk-card-default uk-card-body">
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+                <ul class="uk-slideshow-items">
+                    {% for option in item.options %}
+                    <li>
+                        <img src="{{option.image}}" alt="">
+                    </li>
+                    {% endfor %}
+
+                </ul>
+
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+                    uk-slideshow-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+                    uk-slideshow-item="next"></a>
+            </div>
+            <div uk-grid>
+                {% for option in item.options %}
+                <div class="uk-width-1-6">
+                    <a data-target="#pic-{{forloop.counter}} " data-toggle="tab "><img src="{{option.image}} "
+                            alt=" "></a>
+                </div>
+
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="uk-width-1-3">
+        <div class="uk-card uk-card-default uk-card-body">
+            <h3 class="product-title ">{{item.title}}</h3>
+            <hr width="100% ">
+            {% for option in item.options %}
+            <div style="margin-top: 8px;">
+                <a href="{{option.url}} " class="uk-button uk-button-primary" width="50% " target="_blank">
+                    <div style="display:flex;justify-content: center;align-items: center;">
+                        <img src='{% for key,value in item.origin.items %} {% if key == "logo" %} {{ value }} {% endif %} {% endfor %}'
+                            width="50" alt=" ">
+                        <p style="margin-right: 8px;">Price: Rs. {{option.price.marking_price}} -
+                            {{option.price.selling_price}}</p>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 </div>
-</div>
+
 
 {% endblock %}

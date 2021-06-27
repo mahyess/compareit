@@ -9,7 +9,28 @@ from urllib.parse import urlencode
 import random
 # import urllib2
 
-stores = ['Daraz', 'Sastodeal', 'NepBay', 'Muncha', 'Gyapu']
+stores = [
+  {
+    "name": "daraz",
+    "logo": "https://laz-img-cdn.alicdn.com/images/ims-web/TB1eIwbmljTBKNjSZFuXXb0HFXa.png"
+  },
+  {  
+    "name": "sastodeal",
+    "logo": 'https://cdn.sastodeal.com/logo/stores/1/SDLogo_White-Logo.png'
+  },
+  {
+    "name": "nepbay",
+    "logo": "https://nepbay.com/uploads/2018082815354524400.svg"
+  },
+  {
+    "name": "muncha",
+    "logo": "https://www.muncha.com/assets/images/logo.gif"
+  },
+  {
+    "name": "Gyapu",
+    "logo": "https://www.gyapu.com/806b0f041fef60968c877fe5b54014cb.svg"
+  }
+]
 url_list = {
     'Daraz': 'https://www.daraz.com.np/catalog/?q=', 
     'Sastodeal': 'https://www.sastodeal.com/catalogsearch/result/?q=', 
@@ -52,7 +73,7 @@ def daraz_search(query):
             search_results.append({
                 "id": item['nid'],
                 "details": {
-                    "origin": 0,
+                    "origin": stores[0],
                     "url": item['productUrl'],
                     "title": item['name'],
                     "image": item['image'],
@@ -84,7 +105,7 @@ def sastodeal_search(query):
             search_results.append({
                 "id": random.randint(1,999),
                 "details": {
-                    "origin": 1,
+                    "origin": stores[1],
                     "url": item.find('a', {'class': "product-item-link"})['href'],
                     "title": item.find('a', {'class': "product-item-link"}).string,
                     "image": item.find('img', {'class': "product-image-photo"})['src'],
@@ -123,7 +144,7 @@ def nepbay_search(query):
             search_results.append({
                 "id": idx,
                 "details": {
-                    "origin": 2,
+                    "origin": stores[2],
                     "url": link,
                     "title": title.strip(),
                     "image": image,
@@ -168,7 +189,7 @@ def muncha_search(query):
             search_results.append({
                 "id": idx,
                 "details": {
-                    "origin": 3,
+                    "origin": stores[3],
                     "url": link,
                     "title": title.strip(),
                     "image": image,
@@ -192,7 +213,7 @@ def gyapu_search(query):
                 search_results.append({
                     "id": variant['variant_type'][0]['value'] if len(variant['variant_type']) else item['_id'],
                     "details": {
-                        "origin": 4,
+                        "origin": stores[4],
                         "url": f"https://www.gyapu.com/detail/{item['url_key']}",
                         "title": f"{item['name']} + {variant['variant_type'][0]['value'] if len(variant['variant_type']) else ''}",
                         "image": f"https://www.gyapu.com/{item['image'][0]['document']['path']}",

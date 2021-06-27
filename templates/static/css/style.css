@@ -1,0 +1,48 @@
+.uk-search-default {
+    width: 400px;
+}
+
+.uk-card {
+    height: calc(60% * 1.72);
+}
+
+.uk-card-title {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 8px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.uk-card-body{
+    padding: 16px;
+}
+
+.uk-card-body p {
+    padding: 0;
+    margin: 4px;
+}
+
+.uk-card-media-top {
+    padding: 16px ​8px 4px 4px;
+}
+
+.uk-card-media-top img {
+    height: 200px;
+    object-fit: contain;
+    
+}
+
+.uk-slideshow-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.uk-slideshow-items img{
+    height: 400px;
+    margin-left: 25%;
+}
