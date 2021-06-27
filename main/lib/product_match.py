@@ -72,6 +72,7 @@ def clean_scrap_data(scrap):
 					'min_price': scrap[idx]['details']['price']['selling_price']
 					},
 				'image': scrap[idx]['details']['image'],
+				'origin': scrap[idx]['details']['origin'],
 				'options': [{
 					'origin': scrap[idx]['details']['origin'],
 					'url': scrap[idx]['details']['url'],
