@@ -156,6 +156,7 @@ def nepbay_search(query):
 
     except:
         print('Nepbay: Error in Connection')
+        pass
 
 def muncha_search(query):
     try:

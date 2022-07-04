@@ -11,11 +11,11 @@ def title_match(bt, qt):
 	return pr
 
 def price_match(bp, qp):
-	bh = bp + 0.1 * bp
-	bl = bp - 0.1 * bp
+	bh = bp + 0.2 * bp
+	bl = bp - 0.2 * bp
 	br = True if bl <= qp <= bh else False
-	qh = qp + 0.1 * qp
-	ql = qp - 0.1 * qp
+	qh = qp + 0.2 * qp
+	ql = qp - 0.2 * qp
 	qr = True if ql <= bp <= qh else False
 	return bool(br + qr)
 
